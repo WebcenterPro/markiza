@@ -44,7 +44,7 @@ var dist = 'dist/'; //Папка готового проекта
 
 
 
-/* ===== ТАСК "BROWSER-SYNC" ====== */
+/* ===== ТАSК "BROWSER-SYNC" ====== */
 gulp.task('browser-sync', function() {
 	browserSync({ // Выполняем browserSync
 		server: { // Определяем параметры сервера
@@ -55,7 +55,7 @@ gulp.task('browser-sync', function() {
 });
 /* ================================ */
 
-/* ========= ТАСК "HTML" ========== */
+/* ========= ТАSК "HTML" ========== */
 gulp.task('html', function () {
 	return gulp.src(app + '*.html') //Выберем файлы по нужному пути
 		.pipe(plumber(err)) // Отслеживаем ошибки
@@ -65,10 +65,11 @@ gulp.task('html', function () {
 });
 /* ================================ */
 
-/* ========= ТАСК "SASS" ========== */
+/* ========= ТАSК "SASS" ========== */
 gulp.task('sass', function() {
 	return gulp.src(app + 'src/style.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
+		.pipe(cssImport())
 		.pipe(sass({outputStyle: 'expanded'})) // Преобразуем SCSS в CSS
 		.pipe(queries()) // Объединяем медиа запросы
 		.pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], {cascade: true})) // Создаём префиксы
@@ -77,7 +78,7 @@ gulp.task('sass', function() {
 });
 /* ================================ */
 
-/* ======= ТАСК "CSS-LIBS" ======== */
+/* ======= ТАSК "CSS-LIBS" ======== */
 gulp.task('css-libs', function() {
 	return gulp.src(app + 'src/libs.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
@@ -89,7 +90,7 @@ gulp.task('css-libs', function() {
 });
 /* ================================ */
 
-/* ======== ТАСК "JS" ======== */
+/* ======== ТАSК "JS" ======== */
 gulp.task('js', function() {
 	return gulp.src([app + 'src/**/*.js', '!' + app + 'src/libs.js']) // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
@@ -99,7 +100,7 @@ gulp.task('js', function() {
 });
 /* ================================ */
 
-/* ======== ТАСК "JS-LIBS" ======== */
+/* ======== ТАSК "JS-LIBS" ======== */
 gulp.task('js-libs', function() {
 	return gulp.src(app + 'src/libs.js') // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
@@ -111,7 +112,7 @@ gulp.task('js-libs', function() {
 });
 /* ================================ */
 
-/* ========== ТАСК "IMG" ========== */
+/* ========== ТАSК "IMG" ========== */
 gulp.task('img', function() {
 	return gulp.src(app + 'img/**/*') // Берём все изображения
 		.pipe(cache(imagemin({ // Сжимаем их с наилучшими настройками с учётом кэширования
@@ -125,7 +126,7 @@ gulp.task('img', function() {
 });
 /* ================================ */
 
-/* ========= ТАСК "FONTS" ========= */
+/* ========= ТАSК "FONTS" ========= */
 gulp.task('fonts', function() {
 	return gulp.src(app + 'fonts/**/*') // Берём шрифты
 	.pipe(gulp.dest(dist + 'fonts')) // Выгружаем на продакшн
@@ -133,13 +134,13 @@ gulp.task('fonts', function() {
 });
 /* ================================ */
 
-/* ========= ТАСК "CLEAN" ========= */
+/* ========= ТАSК "CLEAN" ========= */
 gulp.task('clean', function() {
 	return del.sync(dist); // Удаляем папку "dist" перед сборкой
 });
 /* ================================ */
 
-/* ========= ТАСК "BUILD" ========= */
+/* ========= ТАSК "BUILD" ========= */
 gulp.task('build', [
 	'clean',
 	'html',
@@ -152,7 +153,7 @@ gulp.task('build', [
 ]);
 /* ================================ */
 
-/* ========= ТАСК "WATCH" ========= */
+/* ========= ТАSК "WATCH" ========= */
 gulp.task('watch', function() {
 	var watcherHtml = gulp.watch(app + '**/*.html', ['html']); // Наблюдение за HTML файлами
 	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['sass']); // Наблюдение за своими SCSS файлами

@@ -1,0 +1,25 @@
+
+.navigation{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: $font-semibold;
+
+  &__item {
+    a{
+      color: $dark-grey;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    &:after{
+      content:'';
+      
+    }
+  }
+}
+

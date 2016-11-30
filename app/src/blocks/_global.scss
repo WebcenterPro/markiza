@@ -1,0 +1,15 @@
+body{
+  font-family: $font;
+}
+.content{
+  margin-left:260px;
+  padding:15px 20px;
+}
+.call-button{
+  background: $orange;
+  color: $white;
+  width: 180px;
+  text-align: center;
+  font-weight: 400;
+  padding: 10px 0;
+}

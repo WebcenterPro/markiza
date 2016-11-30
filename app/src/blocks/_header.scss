@@ -1,0 +1,49 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px $font_light-grey;
+
+  .lang-switch{
+    float: right;
+  }
+
+}
+
+.area{
+
+  font-weight: $font-regular;
+  color: $font_light-grey;
+  align-self: center;
+
+  &__bold{
+    font-weight: $font-semibold;
+    color: $dark-grey;
+  }
+
+
+}
+
+.flag{
+  width: 34%;
+  position: relative;
+  font-size:14px;
+  background: $grey;
+  padding: 10px 25px;
+  margin-top:15px;
+  color: $white;
+
+  &:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right:-20px;
+    border: 20px solid $grey;
+    border-right: 20px solid transparent;
+  }
+}
