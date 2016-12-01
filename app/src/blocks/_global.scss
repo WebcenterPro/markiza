@@ -4,12 +4,28 @@ body{
 .content{
   margin-left:260px;
   padding:15px 20px;
+  @media (max-width: $tablet) {
+    margin-left: 0;
+    padding:15px 80px;
+  }
 }
 .call-button{
   background: $orange;
   color: $white;
   width: 180px;
+  font-size: 16px;
   text-align: center;
   font-weight: 400;
-  padding: 10px 0;
+  padding: 9px 0;
+  border-radius: 0;
+  align-self: flex-end;
+  margin: 0 5px;
+  
+  @media (max-width: $main-container) {
+    order: 5;
+  }
+
+  &:hover,&:active{
+    color: $white;
+  }
 }

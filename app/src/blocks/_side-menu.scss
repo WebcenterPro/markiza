@@ -14,9 +14,18 @@
   width: 260px;
     .side-menu-top{
       padding:20px;
-      &__logo{
+      .logo{
         text-align: center;
       }
 
     }
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+
+.side-menu-items{
+  list-style: none;
+  padding:0;
 }

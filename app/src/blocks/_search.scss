@@ -1,0 +1,17 @@
+
+.input-search{
+  position: relative;
+    &:before {
+      content:  "\f002";
+      font-family: $font-awesome;
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    &__item{
+      margin-left: 50px;
+      width: auto;
+    }
+  }

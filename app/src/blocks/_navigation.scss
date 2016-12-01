@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px  0;
   font-size: 16px;
   font-weight: $font-semibold;
 
   &__item {
+    position: relative;
     a{
       color: $dark-grey;
       &:hover{
@@ -18,7 +19,20 @@
 
     &:after{
       content:'';
-      
+      width:0px;
+      position: absolute;
+      display: block;
+      top:35px;
+      border-bottom: 2px solid $orange;
+      -webkit-transition: width 1.5s;
+      -moz-transition: width 1.5s;
+      -ms-transition: width 1.5s;
+      -o-transition: width 1.5s;
+      transition: width 1.5s;
+    }
+
+    &:hover:after{
+      width:42px;
     }
   }
 }
