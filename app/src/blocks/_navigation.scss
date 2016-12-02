@@ -24,11 +24,11 @@
       display: block;
       top:35px;
       border-bottom: 2px solid $orange;
-      -webkit-transition: width 1.5s;
-      -moz-transition: width 1.5s;
-      -ms-transition: width 1.5s;
-      -o-transition: width 1.5s;
-      transition: width 1.5s;
+      -webkit-transition: width 1s;
+      -moz-transition: width 1s;
+      -ms-transition: width 1s;
+      -o-transition: width 1s;
+      transition: width 1s;
     }
 
     &:hover:after{

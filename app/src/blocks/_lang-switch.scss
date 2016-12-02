@@ -24,6 +24,7 @@
   &__backgr:not(checked) + &__circle {
     position: relative; /* будем позиционировать псевдочекбокс относительно label */
     padding: 0 0 0 55px; /* оставляем слева от label место под псевдочекбокс */
+
   }
   /* Оформление первой части чекбокса в выключенном состоянии (фон). */
   &__backgr:not(checked) + &__circle:before {
@@ -63,11 +64,11 @@
     position: relative;
     font-weight: $font-semibold;
     font-size: 16px;
-    top: 8px;
+    top: 4px;
   }
   &__ru{
     position: absolute;
-    left: 2px;
+    left: 4px;
   }
   &__backgr:not(checked) ~ &__eng {
     color: $font_light-grey;

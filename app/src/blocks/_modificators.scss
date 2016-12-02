@@ -1,0 +1,12 @@
+.justify{
+  justify-content: space-between;
+}
+.no-margin{
+  margin:0;
+}
+
+.hide-numbers{
+  @media (max-width: $hide-numbers){
+    display: none;
+  }
+}

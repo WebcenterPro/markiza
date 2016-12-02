@@ -1,17 +1,25 @@
 
 .input-search{
   position: relative;
+  margin-top:20px;
+
     &:before {
       content:  "\f002";
       font-family: $font-awesome;
       position: absolute;
       left: 8px;
-      top: 6px;
-      font-size: 14px;
-      color: #4a4a4a;
+      top: 2px;
+      font-size: 18px;
+      color: $grey;
     }
     &__item{
       margin-left: 50px;
       width: auto;
+      border:none;
+      height: 25px;
+      padding-left:5px;
+      &:active,&:focus{
+        outline: none;
+      }
     }
   }
