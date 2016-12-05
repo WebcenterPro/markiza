@@ -10,3 +10,15 @@
     display: none;
   }
 }
+
+.btn-small{
+  @media (max-width: $xs){
+    width: auto;
+    padding: 9px 10px;
+  }
+}
+.hide-xxs{
+  @media (max-width: 500px) {
+   display: none;
+  }
+}
