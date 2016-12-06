@@ -1,0 +1,33 @@
+.section-header {
+  text-align: center;
+  position: relative;
+
+  &__title {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: $font-semibold;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    color: $orange;
+    font-size: 25px;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    margin: 20px 0;
+
+
+    &:after{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 43px;
+      height: 43px;
+      top: -2px;
+      left: -10px;
+      transform: rotate(45deg);
+      border: solid 1px $orange;
+    }
+  }
+}

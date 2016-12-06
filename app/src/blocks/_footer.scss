@@ -1,50 +1,102 @@
-footer{
+footer {
   background-color: $light-grey;
   margin: -20px;
   margin-top: 0;
-  padding:25px;
-  padding-top:0;
+  padding: 25px;
+  padding-top: 0;
+  position: relative;
   justify-content: space-between;
 
-  @media( max-width: 767px){
-    .row{
+
+  .logo{
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+  }
+
+
+  @media(max-width: 767px) {
+    .navigation {
+      flex-direction: column;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      height: 120px;
+
+      &__item {
+        height: 35px;
+
+        &:after {
+          top: 24px;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 580px) {
+    .navigation {
+      height: 150px;
+    }
+    .row {
       flex-direction: column;
     }
   }
+
+  @media(max-width: 430px) {
+    .navigation {
+      height: auto;
+      width: 300px;
+    }
+    .footer-block {
+      width: 300px;
+    }
+  }
+
 }
 
-.footer-block{
+.footer-block {
   font-size: 16px;
   display: inline-block;
 
-  @media( max-width: 767px) {
-    width: 300px;
+  &.wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 63%;
+
+    @media(max-width: 767px) {
+      flex-direction: column;
+      width: auto;
+    }
+  }
+
+  @media(max-width: 767px) {
+    width: 265px;
     align-self: center;
     margin-bottom: 20px;
   }
-  &__header{
+
+  &__header {
     font-weight: $font-semibold;
     font-size: 18px;
     position: relative;
     margin-bottom: 20px;
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
       border-bottom: 2px solid $orange;
-      width:45px;
+      width: 45px;
       bottom: -3px;
     }
   }
-  .call-button{
-    margin-top:15px;
+  .call-button {
+    margin-top: 15px;
   }
 }
 
-.socials{
+.socials {
   display: flex;
-  width:30px;
-  height:30px;
+  width: 30px;
+  height: 30px;
   float: left;
   margin-right: 10px;
   align-items: center;
@@ -52,13 +104,13 @@ footer{
   background-color: $grey;
   color: $white;
 
-  &:hover{
+  &:hover {
     text-decoration: none;
     background-color: $orange;
     color: $white;
   }
-  &__vk{
-    &:after{
+  &__vk {
+    &:after {
       content: "\f189";
       font-family: FontAwesome;
     }
@@ -70,10 +122,10 @@ footer{
     }
   }
 
-  &__tw{
-    &:after{
-    content: "\f099";
-    font-family: FontAwesome;
-   }
+  &__tw {
+    &:after {
+      content: "\f099";
+      font-family: FontAwesome;
+    }
   }
 }

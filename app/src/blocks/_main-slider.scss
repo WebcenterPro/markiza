@@ -1,0 +1,53 @@
+.slider {
+  margin-bottom: 20px;
+}
+.tagline{
+  font-weight: $font-semibold;
+  font-size: 24px;
+}
+.owl-stage, .owl-item {
+  position: relative;
+  max-height: 400px;
+}
+
+.owl-nav {
+  position: absolute;
+  right: 0;
+  top: 48%;
+}
+
+.owl-prev, .owl-next {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  font-family: $font-awesome;
+  display: inline-block;
+  background-color: $light-grey;
+
+  &:hover{
+    background-color: $font-light-grey;
+  }
+
+  &:after {
+    font-size: 35px;
+    position: absolute;
+    top: -2px;
+    right: 20px;
+  }
+
+}
+
+.owl-prev {
+
+  &:after {
+    content: '\f104';
+  }
+}
+
+.owl-next {
+
+  &:after {
+    content: '\f105';
+
+  }
+}

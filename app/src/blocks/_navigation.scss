@@ -19,15 +19,11 @@
 
     &:after{
       content:'';
-      width:0px;
+      width: 0px;
       position: absolute;
       display: block;
       top:35px;
       border-bottom: 2px solid $orange;
-      -webkit-transition: width 1s;
-      -moz-transition: width 1s;
-      -ms-transition: width 1s;
-      -o-transition: width 1s;
       transition: width 1s;
     }
 
