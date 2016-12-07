@@ -1,6 +1,7 @@
 .section-header {
   text-align: center;
   position: relative;
+  margin: 20px 0;
 
   &__title {
     font-size: 18px;
@@ -28,6 +29,18 @@
       left: -10px;
       transform: rotate(45deg);
       border: solid 1px $orange;
+    }
+  }
+
+  &__hr{
+    display: inline-block;
+    width: 100px;
+    border-bottom: solid 1px $orange;
+    margin: 0 40px;
+    position: relative;
+    top: -8px;
+    @media (max-width: $xxs){
+      width: 40px;
     }
   }
 }

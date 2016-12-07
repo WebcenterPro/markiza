@@ -1,6 +1,6 @@
 footer {
-  background-color: $light-grey;
-  margin: -20px;
+  background-color: $light-gray;
+  margin: 0 -20px;
   margin-top: 0;
   padding: 25px;
   padding-top: 0;
@@ -14,6 +14,10 @@ footer {
     bottom: 10px;
   }
 
+  @media (min-width: $xl){
+    margin: 0 -70px;
+    padding: 25px 70px;
+  }
 
   @media(max-width: 767px) {
     .navigation {
@@ -60,7 +64,7 @@ footer {
   &.wrapper {
     display: flex;
     justify-content: space-around;
-    width: 63%;
+    width: 65%;
 
     @media(max-width: 767px) {
       flex-direction: column;
@@ -101,7 +105,7 @@ footer {
   margin-right: 10px;
   align-items: center;
   justify-content: center;
-  background-color: $grey;
+  background-color: $gray;
   color: $white;
 
   &:hover {

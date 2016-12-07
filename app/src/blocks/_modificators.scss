@@ -47,9 +47,9 @@
   }
 }
 
-.portfolio {
+.portfolio-link {
   width: 100%;
-  background-color: $grey;
+  background-color: $gray;
   height: 65px;
   position: absolute;
   bottom: 0;
@@ -65,4 +65,8 @@
     padding-left: 35px;
   }
 
+}
+
+.semibold{
+  font-weight: $font-semibold;
 }

@@ -4,6 +4,8 @@
 .tagline{
   font-weight: $font-semibold;
   font-size: 24px;
+  margin: 25px 0 30px ;
+  text-align: center;
 }
 .owl-stage, .owl-item {
   position: relative;
@@ -13,7 +15,7 @@
 .owl-nav {
   position: absolute;
   right: 0;
-  top: 48%;
+  top: 46%;
 }
 
 .owl-prev, .owl-next {
@@ -22,10 +24,10 @@
   position: relative;
   font-family: $font-awesome;
   display: inline-block;
-  background-color: $light-grey;
+  background-color: $light-gray;
 
   &:hover{
-    background-color: $font-light-grey;
+    background-color: $font_light-gray;
   }
 
   &:after {

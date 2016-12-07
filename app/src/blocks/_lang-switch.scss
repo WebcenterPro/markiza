@@ -35,7 +35,7 @@
     width: 47px;
     height: 23px;
     border-radius: 20px;
-    background: $grey;
+    background: $gray;
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
   }
   /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
@@ -71,7 +71,7 @@
     left: 4px;
   }
   &__backgr:not(checked) ~ &__eng {
-    color: $font_light-grey;
+    color: $font_light-gray;
 
     &:after{
       content: '';
@@ -79,12 +79,12 @@
       width: 100%;
       position: absolute;
       bottom: 0px;
-      border-bottom: dotted 2px $font_light-grey;
+      border-bottom: dotted 2px $font_light-gray;
     }
   }
 
   &__backgr:not(checked) ~ &__ru {
-    color: $dark-grey;
+    color: $dark-gray;
 
     &:after {
       display: none;
@@ -92,7 +92,7 @@
   }
 
   &__backgr:checked ~ &__eng {
-    color: $dark-grey;
+    color: $dark-gray;
 
     &:after {
       display: none;
@@ -100,7 +100,7 @@
   }
 
   &__backgr:checked ~ &__ru {
-    color: $font_light-grey;
+    color: $font_light-gray;
 
     &:after{
       content: '';
@@ -108,7 +108,7 @@
       width: 100%;
       position: absolute;
       bottom: 0px;
-      border-bottom: dotted 2px $font_light-grey;
+      border-bottom: dotted 2px $font_light-gray;
 
     }
   }

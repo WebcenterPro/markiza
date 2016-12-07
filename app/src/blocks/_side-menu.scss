@@ -12,6 +12,10 @@
   width: 260px;
   transition: transform 0.3s ease;
 
+  @media (min-width: $xl){
+    width: 320px;
+  }
+
   @media (max-width: $tablet) {
     transform: translateX(-265px);
   }
@@ -66,12 +70,14 @@
     font-size: 26px;
     cursor: pointer;
     transition: 0.2s;
+
     &:after {
       content: '\f2d3';
       font-family: FontAwesome;
     }
   }
 }
+
 
 .side-menu-items {
   list-style: none;
@@ -107,7 +113,7 @@
     margin-bottom: 5px;
 
     &:hover {
-      background-color: $grey;
+      background-color: $gray;
       border-left: solid 3px $orange;
       padding-left: 32px;
       font-weight: $font-regular;
@@ -120,7 +126,7 @@
     a {
       font-size: 16px;
       text-decoration: none;
-      color: $dark-grey;
+      color: $dark-gray;
     }
   }
 }
