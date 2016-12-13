@@ -57,25 +57,7 @@
   .logo {
     text-align: center;
   }
-  .close {
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    right: 0;
-    display: none;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 26px;
-    cursor: pointer;
-    transition: 0.2s;
 
-    &:after {
-      content: '\f2d3';
-      font-family: FontAwesome;
-    }
-  }
 }
 
 
@@ -140,4 +122,34 @@
         font-size: 15px;
       }
   }
+}
+
+
+.close {
+  position: absolute;
+  z-index: 150;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: url("../../img/close.png") center no-repeat;
+  line-height: 30px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+  //transition: 0.2s;
+
+  transform: rotate(90deg);
+  transition: transform 400ms ease;
+
+  &:hover{
+    transform: rotate(-180deg);
+    transition: transform 400ms ease;
+  }
+  //&:after {
+  //  content: '\f2d3';
+  //  font-family: FontAwesome;
+  //
+  //}
 }

@@ -24,5 +24,22 @@
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7"
-  }
+  },
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebcenterPro/markiza.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebcenterPro/markiza/issues"
+  },
+  "homepage": "https://github.com/WebcenterPro/markiza#readme"
 }

@@ -83,5 +83,18 @@
 .bars{
   font-size: 22px;
   padding: 0  20px 0 0;
+  width: 44px;
+  display: none;
   color: $dark-gray;
+  transition: font-size 0.15s ease;
+
+  &:hover{
+    font-size: 26px;
+    cursor: pointer;
+    transition: font-size 0.15s ease;
+  }
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
 }

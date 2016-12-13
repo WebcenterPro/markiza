@@ -1,0 +1,39 @@
+.sub-menu{
+  position: absolute;
+  left: 260px;
+  top: 0;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  padding: 0;
+  z-index: 90;
+  transition: width .3s ease;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+
+  ul{
+    width: 240px;
+    padding:0;
+    list-style: none;
+  }
+  .close{
+    display: block;
+  }
+
+  &__item{
+  }
+}
+
+.sub-menu._show {
+  width: 280px;
+  visibility: visible;
+  background-color: antiquewhite;
+  padding: 0px 10px;
+  transition: width .3s ease,padding .3s ease;
+}
+
+.sub-menu._current {
+  width: 280px;
+  padding: 0 20px;
+  z-index: 95;
+}
