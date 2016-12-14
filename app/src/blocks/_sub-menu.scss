@@ -1,39 +1,78 @@
-.sub-menu{
+.sub-menu-wrap{
   position: absolute;
   left: 260px;
+  height: 100%;
+  z-index: 90;
+  width:0;
+  visibility: hidden;
+  background-color: $ultra-light-grey;
+  transition:  width .3s ease,  visibility .3s ease;
+  //transform: translateX(-280px);
+
+  &:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    left:100%;
+    bottom: 0;
+    top: 0;
+    z-index: 200;
+    background: url(../../img/menu-shadow.png) 0 0 repeat-y;
+    display: block;
+    outline: none;
+    border: none;
+  }
+}
+
+.sub-menu-wrap._show {
+  width: 280px;
+  visibility: visible;
+  transition: width .3s ease;
+  //transform: translateX(0);
+
+  .close{
+    display: block;
+  }
+
+}
+
+.sub-menu{
+  position: absolute;
+  left: 0;
   top: 0;
   height: 100%;
-  visibility: hidden;
   overflow: hidden;
   width: 0;
   padding: 0;
-  z-index: 90;
-  transition: width .3s ease;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  //box-shadow:  5px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
+  &__header{
+    font-weight: $font-semibold;
+    height: 90px;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    width: 240px;
+  }
+  &__item{
+    padding: 10px 0;
+  }
   ul{
     width: 240px;
     padding:0;
     list-style: none;
   }
-  .close{
-    display: block;
-  }
-
-  &__item{
-  }
 }
 
 .sub-menu._show {
   width: 280px;
-  visibility: visible;
-  background-color: antiquewhite;
+  background-color: $ultra-light-grey;
   padding: 0px 10px;
   transition: width .3s ease,padding .3s ease;
 }
 
 .sub-menu._current {
   width: 280px;
-  padding: 0 20px;
+  padding: 0 30px;
   z-index: 95;
 }

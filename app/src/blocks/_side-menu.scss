@@ -5,10 +5,10 @@
   bottom: 0;
   height: 100%;
   margin-left: 3px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   z-index: 101;
   background: #fff;
-  transform: translateX(0);
+  transform: translateX(0px);
   width: 260px;
   transition: transform 0.3s ease;
 
@@ -17,18 +17,21 @@
   }
 
   @media (max-width: $tablet) {
-    transform: translateX(-265px);
+    transform: translateX(-275px);
   }
+
+
 
   &.opened {
     transform: translateX(0);
+
     .logo {
       text-align: left;
       img {
         width: 120px;
       }
     }
-    .close {
+    .side-menu-top>.close {
       display: block;
     }
     .logo {
@@ -46,13 +49,17 @@
     }
 
   }
+
+  &.small-view{
+    transform: translateX(-230px);
+  }
 }
 
 .side-menu-top {
   padding: 20px 5px 10px 5px;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 101;
 
   .logo {
     text-align: center;
@@ -68,11 +75,26 @@
   height: 100%;
   width: 100%;
   top: 0;
+  z-index: 100;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
   padding-top: 130px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    width: 18px;
+    left: 100%;
+    bottom: 0;
+    top: 0;
+    background: url(../../img/menu-shadow.png) 0 0 repeat-y;
+    display: block;
+    outline: none;
+    border: none;
+  }
+
 
   &__full, &__catalog {
     width: 100%;
@@ -80,6 +102,17 @@
   }
   &__catalog {
     display: block;
+
+    .active{
+      background-color: $gray;
+      border-left: solid 3px $orange;
+      padding-left: 32px;
+      font-weight: $font-regular;
+      a {
+        color: $white;
+      }
+    }
+
   }
   &__full {
     display: none;
@@ -121,6 +154,8 @@
       a{
         font-size: 15px;
       }
+
+
   }
 }
 
@@ -129,7 +164,7 @@
   position: absolute;
   z-index: 150;
   top: 0;
-  right: 0;
+  right: 0px;
   display: none;
   width: 30px;
   height: 30px;
@@ -152,4 +187,30 @@
   //  font-family: FontAwesome;
   //
   //}
+}
+
+
+.portfolio-link {
+  width: 100%;
+  background-color: $gray;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  a {
+    color: $white;
+  }
+  &:hover {
+    border: none;
+    padding-left: 35px;
+  }
+
+  @media (max-width: $xs) {
+    height:45px;
+
+  }
 }

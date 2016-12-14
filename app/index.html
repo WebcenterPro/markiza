@@ -199,19 +199,83 @@
         <div class="section-header__hr"></div>
     </div>
 
-    <ul class="nav nav-tabs tabs">
-        <li class="active tabs__item"><a data-toggle="tab" href="#business">Бизнесу </a></li>
-        <li class="tabs__item"><a data-toggle="tab" href="#private">Частным клиентам</a></li>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs tabs" role="tablist">
+        <li class="nav-item tabs__item">
+            <a class="nav-link  tabs__link active" data-toggle="tab" href="#business" role="tab">Бизнесу</a>
+        </li>
+        <li class="nav-item  tabs__item">
+            <a class="nav-link   tabs__link " data-toggle="tab" href="#private" role="tab">Частным клиентам</a>
+        </li>
+
     </ul>
 
-    <div class="tab-content ">
-        <div id="business" class="tab-pane fade in active">
-            <h3>HOME</h3>
-            <p>Some content.</p>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="business" role="tabpanel">
+            <div class="design-block  left">
+                <div class="design-block__nav left">
+                    <ul>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            На окна
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            На террасу
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для защиты от ветра
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для беседки
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для бань и веранд
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для автомобиля
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="design-block__img">
+                    <img src="img/design.jpg" alt="">
+                    <div class="design-block__bottom-descr">
+                        Установка маркиз на террасу — один из самых частых заказов среди частных клиентов.
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div id="private" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <p>Some content in menu 1.</p>
+        <div class="tab-pane" id="private" role="tabpanel">
+            <div class="design-block right">
+                <div class="design-block__img">
+                    <img src="img/design.jpg" alt="">
+                    <div class="design-block__bottom-descr">
+                        Установка маркиз на террасу — один из самых частых заказов среди частных клиентов.
+                    </div>
+                </div>
+                <div class="design-block__nav ">
+                    <ul>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            На окна
+                        </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            На террасу
+                            </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для защиты от ветра
+                            </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для беседки
+                           </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для бань и веранд
+                           </a></li>
+                        <li class="design-block__nav-item"><a href="" class="design-block__nav-link">
+                            Для автомобиля
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
