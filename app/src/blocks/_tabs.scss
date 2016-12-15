@@ -12,18 +12,20 @@
   }
 }
 
-.nav-tabs{
+
+.nav-tabs.tabs{
   .nav-item{
     float: none;
     text-align: center;
-    padding: 20px 5px;
+    padding: 5px 5px 0;
   }
 
   .nav-link{
     position: relative;
     border:none;
-    display: inline;
+    display: inline-block;
     padding: 0 ;
+    padding-bottom: 20px;
     color: $dark-gray;
 
     &.active,&.active:focus,&.active:hover{
@@ -36,8 +38,13 @@
           position: absolute;
           display: block;
           left:0;
-          top:40px;
+          top:42px;
           border-bottom: 2px solid $orange;
+
+        @media (max-width:$xxs){
+
+          top: 33px;
+        }
         }
       }
     }

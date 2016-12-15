@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+//    var solution_block__nav_width = $(".solution-block__nav").width()+23;
+
+
     /*****OWL SLIDER INIT********/
 
     $('.owl-carousel').owlCarousel({
@@ -14,6 +17,10 @@ $(document).ready(function() {
         // }
 
     });
+
+
+
+    //solutions block
 
 
 });

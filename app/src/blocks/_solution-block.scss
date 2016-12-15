@@ -1,0 +1,244 @@
+.solution-block {
+  display: flex;
+
+
+
+  @media (max-width: $xs) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+
+
+  &__img {
+    width: 67%;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+  }
+  &__bottom-descr {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    font-weight: $font-regular;
+    height: 25%;
+    width: 100%;
+    padding: 0 30px 20px;
+    display: flex;
+    align-items: flex-end;
+    background-image: linear-gradient(to top, rgba(8, 4, 4, 0.9), rgba(178, 8, 0, 0.4) 40%, transparent);
+
+    @media (max-width: $xxs) {
+      font-size: 14px;
+      height: 50%;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    background: $ultra-light-grey;
+    transform: rotate(45deg);
+    border: 3px solid $red;
+
+    &:hover {
+      bottom: 26px;
+      cursor: pointer;
+    }
+
+    .fa-angle-right:before {
+
+      position: absolute;
+      color: $red;
+      font-size: 28px;
+
+    }
+  }
+
+  &__nav {
+    width: 33%;
+    background-color: $orange;
+    display: flex;
+    align-items: center;
+
+
+    @media (max-width: $xs) {
+      width: 100%;
+      padding:0 10px;
+    }
+
+    ul.nav-tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      border-bottom: none;
+      z-index: 5;
+
+      @media (max-width: $xs) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  &__nav-item {
+
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+
+    @media (max-width: $xs) {
+      display: inline-flex;
+      width: auto;
+    }
+
+  }
+
+  &__nav-link {
+    color: $white;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+
+    @media (max-width: $xs) {
+      display: inline-flex;
+      width: auto;
+      font-size: 14px;
+      padding: 5px 10px ;
+    }
+
+    &.active, &:hover {
+      color: $white;
+      width: 108%;
+      border-color: transparent;
+      background-color: $dark-gray;
+      text-decoration: none;
+    }
+
+    @media (max-width: $xs) {
+      display: inline-flex;
+      width: auto;
+    }
+
+  }
+
+}
+
+//business
+.left {
+  .solution-block__nav-item {
+    margin-left: -1px;
+  }
+  .solution-block__nav-link {
+    padding-left: 30px;
+
+    &:hover, &.active {
+      padding-right: 20px;
+    }
+  }
+  .solution-block__bottom-descr {
+    padding-left: 30%;
+    text-align: right;
+  }
+  .solution-block__btn {
+    left: 35px;
+    .fa-angle-right:before {
+      top: 5px;
+      left: 11px;
+      transform: rotate(135deg);
+    }
+  }
+
+  @media (max-width: $xs) {
+    .solution-block__nav-item {
+      margin-left: 0;
+    }
+    .solution-block__nav-link {
+      padding: 5px 10px;
+      &:hover, &.active {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+//private
+.right {
+  .solution-block__nav {
+    order: 2;
+  }
+  .solution-block__img {
+    order: 1;
+  }
+  .solution-block__nav-item {
+    margin-right: -1px;
+    position: relative;
+    min-height: 44px;
+  }
+  .solution-block__nav-link {
+    position: absolute;
+    right: 0;
+    padding-left: 30px;
+
+    &:hover, &.active {
+
+      padding-left: 6%;
+    }
+
+  }
+
+  @media (max-width: $xs) {
+    .solution-block__nav {
+      order: 0;
+    }
+    .solution-block__img {
+      order: 0;
+    }
+
+    .solution-block__nav-item {
+      margin-left: 0;
+      min-height:0;
+    }
+    .solution-block__nav-link {
+      position: relative;
+      padding: 5px 10px;
+      &:hover, &.active {
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  .solution-block__bottom-descr {
+    padding-right: 30%;
+  }
+  .solution-block__btn {
+    right: 35px;
+    .fa-angle-right:before {
+      top: 1px;
+      left: 12px;
+      transform: rotate(-45deg);
+    }
+  }
+
+}
+
+
