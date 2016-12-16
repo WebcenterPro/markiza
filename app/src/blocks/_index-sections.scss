@@ -23,8 +23,6 @@
   }
 }
 
-
-
 .portfolio {
   padding: 20px 0 40px;
 
@@ -34,12 +32,12 @@
     align-items: stretch;
     flex-wrap: wrap;
 
-    @media (max-width: $xs){
+    @media (max-width: $xs) {
       justify-content: center;
     }
   }
 
-  .view-more{
+  .view-more {
     width: 30%;
     margin: 10px;
     background-color: $orange;
@@ -53,20 +51,31 @@
     align-items: center;
     min-height: 200px;
 
-    @media (max-width: $xs){
+    @media (max-width: $xs) {
       width: 45%;
     }
     @media (max-width: $xxs) {
       width: 100%;
     }
   }
-  .inner-wrap{
+  .inner-wrap {
     padding: 20px 15px;
   }
 }
 
-.solutions,.why-are-choosen{
+.solutions, .why-are-choosen, .news {
   margin-bottom: 45px;
+}
+
+.news {
+
+  .news-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
 }
 
 .client-logo {
@@ -76,7 +85,7 @@
     margin: 5px 0;
     width: 33.33%;
 
-    &__img{
+    &__img {
       max-width: 140px;
     }
   }

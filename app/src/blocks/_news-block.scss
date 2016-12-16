@@ -1,0 +1,127 @@
+.news-block {
+  width: 49%;
+  display: flex;
+
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @media (max-width: $xs) {
+
+    width: 45%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  @media (max-width: $xxs) {
+    width: 100%;
+  }
+
+  &__img {
+    width: 33%;
+    display: inline-block;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+  }
+
+  &__outer {
+    width: 65%;
+    display: inline-block;
+    background-color: $light-gray;
+    padding: 15px;
+    padding-left: 0;
+
+    @media (max-width: $xs) {
+      width: 100%;
+      padding: 15px;
+      padding-top: 0;
+    }
+  }
+
+  &__descr {
+    background-color: $white;
+    padding: 10px 15px 10px 25px;
+    height: 100%;
+  }
+
+  &__descr-date {
+    color: $gray;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  &__descr-text {
+    font-size: 1.1vw;
+    color: $dark-gray;
+    text-decoration: underline;
+
+    &:hover{
+      text-decoration: none;
+    }
+    @media (max-width: $xs) {
+      font-size: 14px;
+    }
+  }
+}
+
+.sticker {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  right: -17px;
+  top: 38%;
+  border-radius: 50%;
+  background-color: $orange;
+
+
+  @media (max-width: $xs) {
+    top: 93%;
+    right: 5%;
+  }
+
+  &.-video,&.-photo, &.-text{
+    &:after {
+      font-family: $font-awesome;
+      color: $white;
+      position: relative;
+      top:5px;
+    }
+  }
+  &.-video {
+    &:after {
+      content: '\f04b';
+    }
+  }
+  &.-photo {
+    &:after {
+      content: '\f030';
+    }
+  }
+  &.-text {
+    &:after {
+      content: '\f0f6';
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

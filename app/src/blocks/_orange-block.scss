@@ -10,6 +10,12 @@
   text-align: center;
   margin-bottom: 20px;
 
+  @media (max-width: $xxs) {
+    width: 100%;
+  }
+
+
+
   &__img{
     width:100%;
     display: block;
@@ -24,16 +30,50 @@
     }
   }
 
+  &__filter{
+    width:100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    background-color: $orange;
+    opacity: 0.7;
+
+    &:hover{
+      opacity: 0.4;
+    }
+  }
 
 
   &__title{
     position: absolute;
-    font-size: 27px;
+    font-size: 2vw;
     text-transform: uppercase;
     color: $white;
-    top:0;
-    width:75%;
-    border-bottom: solid 1px $white;
+    top: 45%;
+    width:100%;
+
+    @media (max-width: $xs) {
+      font-size: 3vw;
+    }
+    @media (max-width: $xxs) {
+      font-size: 3.9vw;
+    }
+
+    &:after{
+      content: '';
+      width: 70%;
+      display: block;
+      border-bottom: 1px solid $white;
+      position: absolute;
+
+      left: 15%;
+
+      @media (max-width: $xxs) {
+        width: 90%;
+        left:5%;
+      }
+
+    }
 
 
   }
