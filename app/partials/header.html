@@ -37,6 +37,24 @@
             <div class="lang-switch__ru">RU</div>
             <div class="lang-switch__eng">EN</div>
         </div>
+
+        <!-- Login modal -->
+        <div class="modal fade pop-up login-popup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="close" data-dismiss="modal"></div>
+                    <div class="header">ВХОД</div>
+                    <form>
+                        <input type="email" placeholder="ВАШ E-MAIL" required class="input text-input">
+                        <input type="password" placeholder="ВАШ ПАРОЛЬ" required class="input text-input">
+                        <input type="submit" class="btn btn-yellow" value="ВОЙТИ">
+                    </form>
+                    <a href="#" class="link">Забыли пароль?</a>
+                    <a href="/auth/register/" class="link registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     @@include('navigation-top.html')
