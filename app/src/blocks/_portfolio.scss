@@ -1,13 +1,14 @@
 
-.example-horizontal{
+.example-horizontal {
 
   width: 63%;
 
-  &__img{
+  &__img {
     display: inline-block;
     float: left;
-    width: 47%;
+    width: 54%;
     margin-right: 15px;
+    padding-right: 7%;
   }
   @media (max-width: $xs) {
 
@@ -15,7 +16,7 @@
 
     &__img {
 
-      width: 48%;
+      width: 53%;
     }
   }
   @media (max-width: $xxs) {
@@ -24,12 +25,11 @@
 
     &__img {
       width: 100%;
+      margin-bottom: 20px;
     }
   }
 
 }
-
-
 
 .example-vertical {
 
@@ -38,49 +38,54 @@
   @media (max-width: $xs) {
     width: 45%;
 
-    &:nth-child(3){
+    &:nth-child(3) {
       order: 5;
     }
   }
   @media (max-width: $xxs) {
     width: 100%;
 
-    &:nth-child(3){
+    &:nth-child(3) {
       order: 0;
     }
   }
 }
 
-
-.example-vertical, .example-horizontal{
-  border:2px solid $light-gray;
+.example-vertical, .example-horizontal {
+  border: 2px solid $light-gray;
   color: $dark-gray;
   margin: 10px;
+  margin-bottom: 20px;
 
-  &__img{
-    img{
-      width:100%;
+  &__img {
+    img {
+      width: 100%;
     }
   }
 
-  &__date{
+  &__date {
     font-weight: $font-bold;
     font-size: 12px;
   }
-  &__title{
+  &__title {
     font-weight: $font-bold;
     font-size: 16px;
+    margin: 7px 0;
     text-transform: uppercase;
   }
-  &__location{
+  &__location {
     font-weight: $font-semibold;
     font-size: 12px;
+    margin-bottom: 10px;
   }
-  &__description{
+  &__description {
     font-weight: $font-light;
-    font-size: 1.1vw;
+    font-size: 14px;
     color: #000;
 
+    @media (min-width: $l) {
+      font-size: 16px;
+    }
     @media (max-width: $xs) {
       font-size: 1.8vw;
     }

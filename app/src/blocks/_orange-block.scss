@@ -10,6 +10,10 @@
   text-align: center;
   margin-bottom: 20px;
 
+  @media (min-width: $l) {
+    width: 24%;
+  }
+
   @media (max-width: $xxs) {
     width: 100%;
   }
@@ -46,33 +50,40 @@
 
   &__title{
     position: absolute;
-    font-size: 2vw;
-    text-transform: uppercase;
-    color: $white;
     top: 45%;
     width:100%;
 
-    @media (max-width: $xs) {
-      font-size: 3vw;
-    }
-    @media (max-width: $xxs) {
-      font-size: 3.9vw;
-    }
+    span {
+      font-size: 21px;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      color: $white;
 
-    &:after{
-      content: '';
-      width: 70%;
-      display: block;
-      border-bottom: 1px solid $white;
-      position: absolute;
-
-      left: 15%;
-
-      @media (max-width: $xxs) {
-        width: 90%;
-        left:5%;
+      @media (min-width: $l) {
+        font-size: 1.2vw;
       }
 
+      @media (max-width: $xs) {
+        font-size: 3vw;
+      }
+      @media (max-width: $xxs) {
+        font-size: 3.9vw;
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        top:-23px;
+        @media (max-width: $xs) {
+          top:-15px;
+        }
+        border-bottom: 1px solid $white;
+
+
+      }
     }
 
 

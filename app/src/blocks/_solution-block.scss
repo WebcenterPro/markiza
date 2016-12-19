@@ -149,7 +149,7 @@
     margin-left: -1px;
   }
   .solution-block__nav-link {
-    padding-left: 30px;
+    padding-left: 10%;
 
     &:hover, &.active {
       padding-right: 20px;
@@ -170,7 +170,7 @@
 
   @media (max-width: $xs) {
     .solution-block__nav-item {
-      margin-left: 0;
+      margin: 2px;
     }
     .solution-block__nav-link {
       padding: 5px 10px;
@@ -197,11 +197,11 @@
   .solution-block__nav-link {
     position: absolute;
     right: 0;
-    padding-left: 30px;
+    padding-left: 10%;
 
     &:hover, &.active {
 
-      padding-left: 6%;
+      padding-left: 18%;
     }
 
   }
@@ -215,7 +215,7 @@
     }
 
     .solution-block__nav-item {
-      margin-left: 0;
+      margin: 2px;
       min-height:0;
     }
     .solution-block__nav-link {

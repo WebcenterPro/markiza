@@ -24,7 +24,7 @@
 }
 
 .portfolio {
-  padding: 20px 0 40px;
+  padding: 10px 0;
 
   .wrapper {
     display: flex;
@@ -40,9 +40,9 @@
   .view-more {
     width: 30%;
     margin: 10px;
+    margin-bottom: 20px;
     background-color: $orange;
-    font-weight: $font-semibold;
-    color: $white;
+
     display: flex;
     text-align: center;
     justify-content: center;
@@ -50,6 +50,12 @@
     text-transform: uppercase;
     align-items: center;
     min-height: 200px;
+
+    a {
+      font-weight: $font-semibold;
+      color: $white;
+    }
+
 
     @media (max-width: $xs) {
       width: 45%;
@@ -59,12 +65,16 @@
     }
   }
   .inner-wrap {
-    padding: 20px 15px;
+    padding: 20px 25px;
   }
 }
 
-.solutions, .why-are-choosen, .news {
-  margin-bottom: 45px;
+.slider , .our-clients, .portfolio, .solutions, .why-are-choosen, .news, .how-we-do-it {
+  margin-bottom: 60px;
+
+  @media( max-width: $xxs){
+    margin-bottom: 20px;
+  }
 }
 
 .news {
@@ -91,5 +101,9 @@
   }
   @media (max-width: $xxs) {
     width: 50%;
+
+    &__img {
+      max-width: 120px;
+    }
   }
 }

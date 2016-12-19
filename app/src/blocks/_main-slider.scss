@@ -1,11 +1,19 @@
 .slider {
   margin-bottom: 20px;
+
+  @media( max-width: $xxs){
+    display: none;
+  }
 }
 .tagline{
   font-weight: $font-semibold;
   font-size: 24px;
   margin: 25px 0 30px ;
   text-align: center;
+
+  @media( max-width: $xxs){
+    font-size: 18px;
+  }
 }
 .owl-stage, .owl-item {
   position: relative;

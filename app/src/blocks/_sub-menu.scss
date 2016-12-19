@@ -22,6 +22,10 @@
     outline: none;
     border: none;
   }
+
+  @media (min-width: $xl){
+    left: 320px;
+  }
 }
 
 .sub-menu-wrap._show {
@@ -53,9 +57,17 @@
     align-items: center;
     display: flex;
     width: 240px;
+    a{
+      text-decoration: none;
+      color: $dark-gray;
+    }
   }
   &__item{
     padding: 10px 0;
+    a{
+      text-decoration: none;
+      color: $dark-gray;
+    }
   }
   ul{
     width: 240px;
