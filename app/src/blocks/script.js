@@ -18,7 +18,25 @@ $(document).ready(function() {
 
     });
 
+    $('.client-slider').owlCarousel({
+        loop: true,
+        nav: false,
+        dots: false,
+        navText: ["", ""],
+        items: 6,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
 
+    });
 
     //solutions block
 

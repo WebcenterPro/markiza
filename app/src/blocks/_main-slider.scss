@@ -4,17 +4,8 @@
   @media( max-width: $xxs){
     display: none;
   }
-}
-.tagline{
-  font-weight: $font-semibold;
-  font-size: 24px;
-  margin: 25px 0 30px ;
-  text-align: center;
 
-  @media( max-width: $xxs){
-    font-size: 18px;
-  }
-}
+
 .owl-stage, .owl-item {
   position: relative;
   max-height: 400px;
@@ -59,5 +50,17 @@
   &:after {
     content: '\f105';
 
+  }
+}
+
+}
+.tagline{
+  font-weight: $font-semibold;
+  font-size: 24px;
+  margin: 25px 0 30px ;
+  text-align: center;
+
+  @media( max-width: $xxs){
+    font-size: 18px;
   }
 }
