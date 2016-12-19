@@ -5,9 +5,10 @@ $(document).ready(function() {
 
     /*****OWL SLIDER INIT********/
 
-    $('.owl-carousel').owlCarousel({
+    $('.slider .owl-carousel').owlCarousel({
         loop: true,
         nav: true,
+        autoplay: true,
         navText: ["", ""],
         items: 1
         // responsive: {
@@ -18,21 +19,23 @@ $(document).ready(function() {
 
     });
 
-    $('.client-slider').owlCarousel({
+    $('.owl-carousel.client-slider').owlCarousel({
         loop: true,
         nav: false,
         dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        // margin:30,
         navText: ["", ""],
-        items: 6,
         responsive:{
             0:{
-                items:1
+                items:2
             },
             600:{
                 items:3
             },
             1000:{
-                items:5
+                items:6
             }
         }
 
