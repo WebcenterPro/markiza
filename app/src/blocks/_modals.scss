@@ -1,0 +1,143 @@
+.login-popup {
+  &__content {
+    border-radius: 0;
+  }
+  &__dialog {
+
+    max-width: 360px;
+
+  }
+
+  &__close {
+    display: block;
+    top: 25px;
+    right: 19px;
+  }
+  &__header {
+    padding: 26px 24px;
+    background-color: #f4f4f4;
+    border-color: #fff;
+    line-height: 1em;
+  }
+  &__tab {
+    display: inline-block;
+    color: #7c7a7a;
+  }
+  &__tabs {
+    margin-bottom: 0;
+  }
+  &__tabs .active  {
+    color: #2d2d2d;
+  }
+  &__tabs-content {
+    padding: 28px;
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: #3d3d3d;
+    &::-webkit-input-placeholder {
+      color: #3d3d3d;
+    }
+    &::-moz-placeholder {
+      color: #3d3d3d;
+    }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+      color: #3d3d3d;
+    }
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+      color: #3d3d3d;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #ff5816;
+    line-height: 1em;
+    padding: 14px 0;
+    text-align: center;
+    color: #3d3d3d;
+    &:hover{
+      background-color: #ff5816;
+      border: 1px solid #ff5816;
+      color: #fff;
+    }
+    &:active{
+      background-color: #ff3d17;
+      border: 1px solid #ff3d17;
+      color: #fff;
+    }
+  }
+  &__link {
+    color: #7c7a7a;
+    text-decoration: none;
+    &:hover {
+      color: #2d2d2d;
+      text-decoration: none;
+    }
+    &:active {
+      color: #2d2d2d;
+      text-decoration: none;
+    }
+    &:visited {
+      color: #2d2d2d;
+      text-decoration: none;
+    }
+    &:focus {
+      color: #2d2d2d;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 20px;
+    &:after {
+      content: '';
+      width: 25px;
+      display: block;
+      top: 18px;
+      border-bottom: 2px solid #ff5816;
+      padding-top: 10px;
+    }
+  }
+  &__tabs-content p {
+    font-size: 14px;
+  }
+  &__tabs-content p a {
+    color: #dbdbdb;
+    text-decoration: underline;
+  }
+  &__tabs-content p span {
+    color: #3d3d3d;
+  }
+  &__password {
+    text-decoration: none;
+    font-size: 14px;
+    color: #2d2d2d;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    &:hover {
+      color: #2d2d2d;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #2d2d2d;
+      text-decoration: underline;
+    }
+    &:focus {
+      color: #2d2d2d;
+      text-decoration: underline;
+    }
+  }
+}

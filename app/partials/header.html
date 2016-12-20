@@ -39,22 +39,49 @@
         </div>
 
         <!-- Login modal -->
-        <div class="modal fade pop-up login-popup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="close" data-dismiss="modal"></div>
-                    <div class="header">ВХОД</div>
-                    <form>
-                        <input type="email" placeholder="ВАШ E-MAIL" required class="input text-input">
-                        <input type="password" placeholder="ВАШ ПАРОЛЬ" required class="input text-input">
-                        <input type="submit" class="btn btn-yellow" value="ВОЙТИ">
-                    </form>
-                    <a href="#" class="link">Забыли пароль?</a>
-                    <a href="/auth/register/" class="link registration">Регистрация</a>
+        <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog login-popup__dialog" role="document">
+                <div class="modal-content login-popup__content">
+
+                    <div class="header login-popup__header">
+                        <ul class="nav nav-tabs tabs login-popup__tabs" role="tablist">
+                            <li class="nav-item  login-popup__tab active" ><a class="login-popup__link"  data-toggle="tab" role="tab" href="#enter">Вход</a></li>
+                            <li class="login-popup__tab login-popup__divider">|</li>
+                            <li class="nav-item login-popup__tab"><a class="login-popup__link" data-toggle="tab" role="tab"  href="#registration-form">Регистрация</a></li>
+                        </ul>
+                        <div class="close login-popup__close" data-dismiss="modal"></div>
+                    </div>
+
+                    <div class="tab-content login-popup__tabs-content">
+                        <div id="enter" class="tab-pane login-popup__pane active" role="tabpanel">
+                            <h5 class="login-popup__title">Вход</h5>
+                            <p>Если у вас нет аккаунта - <a href="#registration-form"  data-toggle="tab" role="tab"><span>зарегистрируйтесь</span></a></p>
+                            <form>
+                                <input type="email" placeholder="E-mail" required class="login-popup__input">
+                                <input type="password" placeholder="Пароль" required class="login-popup__input">
+                                <input  type="submit" class="btn login-popup__submit" value="Войти">
+                            </form>
+                            <a href="#" class="link login-popup__password">Забыли пароль?</a>
+
+                        </div>
+                        <div id="registration-form" class="tab-pane login-popup__pane" role="tabpanel">
+                            <h5 class="login-popup__title">Регистрация</h5>
+                            <form>
+                                <input type="text" placeholder="Имя" required class="login-popup__input">
+                                <input type="email" placeholder="E-mail" required class="login-popup__input">
+                                <input type="password" placeholder="Пароль" required class="login-popup__input">
+                                <input type="password" placeholder="Подтверждение пароля" required class="login-popup__input">
+                                <input type="submit" class="btn login-popup__submit" value="Зарегистрироваться">
+                            </form>
+
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
-        </div>
 
     </header>
 
     @@include('navigation-top.html')
+
