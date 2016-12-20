@@ -1,35 +1,40 @@
-body{
+body {
   font-family: $font;
 }
 
-.content{
-  margin-left:265px;
+.content {
+  margin-left: 265px;
   padding: 0 20px;
 
-  @media (min-width: $xl){
-   padding: 0 70px;
-    margin-left:325px;
+  @media (min-width: $xl) {
+    padding: 0 70px;
+    margin-left: 325px;
   }
 
   @media (max-width: $tablet) {
     margin-left: 0;
-    //padding: 15px 20px;
   }
 }
 
 
-.call-button{
+.btn {
   background: $orange;
   color: $white;
-  width: 180px;
   font-size: 16px;
   text-align: center;
   font-weight: 400;
-  padding: 9px 0;
+  padding: 9px 18px;
   border-radius: 0;
   align-self: flex-end;
   margin: 0 5px 0 0;
-  
+
+
+  &:focus{
+    outline: none;
+  }
+}
+  .call-button{
+
   @media (max-width: $main-container) {
     order: 5;
   }
@@ -38,20 +43,24 @@ body{
   }
 
 
-  &:hover,&:active{
-    color: $white;
-  }
 }
 
-.logo{
+.logo {
   text-align: center;
-  max-width:250px;
+  max-width: 250px;
 
-  &__img{
-    width:96%;
+  &__img {
+    width: 96%;
   }
 
   @media (max-width: $xs) {
     max-width: 160px;
   }
+}
+
+h2.title {
+  font-size: 24px;
+  font-weight: $font-semibold;
+  text-align: center;
+  margin: 30px 0;
 }

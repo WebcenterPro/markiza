@@ -1,66 +1,88 @@
 .slider {
   margin-bottom: 20px;
 
-  @media( max-width: $xxs){
+  @media(max-width: $xxs) {
     display: none;
   }
 
-
-.owl-stage, .owl-item {
-  position: relative;
-  max-height: 400px;
-}
-
-.owl-nav {
-  position: absolute;
-  right: 0;
-  top: 46%;
-}
-
-.owl-prev, .owl-next {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  font-family: $font-awesome;
-  display: inline-block;
-  background-color: $light-gray;
-
-  &:hover{
-    background-color: $font_light-gray;
+  .owl-stage, .owl-item {
+    position: relative;
+    max-height: 400px;
   }
 
-  &:after {
-    font-size: 35px;
+  .owl-nav {
     position: absolute;
-    top: -2px;
-    right: 20px;
+    right: 0;
+    top: 46%;
+  }
+
+  .owl-prev, .owl-next {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    font-family: $font-awesome;
+    display: inline-block;
+    background-color: $light-gray;
+
+    &:hover {
+      background-color: $font_light-gray;
+    }
+
+    &:after {
+      font-size: 35px;
+      position: absolute;
+      top: -2px;
+      right: 20px;
+    }
+
+  }
+
+  .owl-prev {
+
+    &:after {
+      content: '\f104';
+    }
+  }
+
+  .owl-next {
+
+    &:after {
+      content: '\f105';
+
+    }
   }
 
 }
 
-.owl-prev {
-
-  &:after {
-    content: '\f104';
-  }
-}
-
-.owl-next {
-
-  &:after {
-    content: '\f105';
-
-  }
-}
-
-}
-.tagline{
+.tagline {
   font-weight: $font-semibold;
   font-size: 24px;
-  margin: 25px 0 30px ;
+  margin: 25px 0 30px;
   text-align: center;
 
-  @media( max-width: $xxs){
+  @media(max-width: $xxs) {
     font-size: 18px;
   }
+}
+
+/*SEE END OF THUMBNAIL FUCNTION TO TINKER SIZE OF THUMBS*/
+.itemcard-slider {
+
+  .owl-nav {
+    position: absolute;
+    right: 0;
+    top: 34%;
+  }
+  .owl-dots {
+    display: flex;
+    justify-content: space-between;
+  }
+  .owl-dot {
+
+    background-size: cover;
+    margin-top: 10px;
+    display: inline-block;
+
+  }
+
 }
