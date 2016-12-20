@@ -21,10 +21,10 @@
             <span class="area__bold "> (495) 983-58-58 -</span> Москва
         </div>
 
-        <div class="call-button btn btn-small">
+        <a href="#" class="call-button btn btn-small" data-toggle="modal" data-target=".callback-modal">
             <span class="hidden-sm-down">Заказать звонок</span>
             <i class="fa fa-phone hidden-md-up" aria-hidden="true"></i>
-        </div>
+        </a>
 
 
         <div class="flag hidden-sm-down">
@@ -38,7 +38,7 @@
             <div class="lang-switch__eng">EN</div>
         </div>
 
-        <!-- Login modal -->
+        <!-- Login and registration modal windows -->
         <div class="modal fade login-popup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
             <div class="modal-dialog login-popup__dialog" role="document">
                 <div class="modal-content login-popup__content">
@@ -61,7 +61,7 @@
                                 <input type="password" placeholder="Пароль" required class="login-popup__input">
                                 <input  type="submit" class="btn login-popup__submit" value="Войти">
                             </form>
-                            <a href="#" class="link login-popup__password">Забыли пароль?</a>
+                            <a href="#" class="link login-popup__password" data-toggle="modal" data-target=".refresh-password">Забыли пароль?</a>
 
                         </div>
                         <div id="registration-form" class="tab-pane login-popup__pane" role="tabpanel">
@@ -73,14 +73,68 @@
                                 <input type="password" placeholder="Подтверждение пароля" required class="login-popup__input">
                                 <input type="submit" class="btn login-popup__submit" value="Зарегистрироваться">
                             </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- Refresh password modal -->
+            <div class="modal fade refresh-password" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog login-popup__dialog" role="document">
+                    <div class="modal-content login-popup__content">
+
+                        <div class="header login-popup__header">
+                            <ul class="nav nav-tabs tabs login-popup__tabs" role="tablist">
+                                <li class="nav-item  login-popup__tab active" ><a class="login-popup__link"  data-toggle="tab" role="tab" href="#refresh">Забыли пароль</a></li>
+                            </ul>
+                            <div class="close login-popup__close" data-dismiss="modal"></div>
                         </div>
 
+                        <div class="tab-content login-popup__tabs-content">
+                            <div id="refresh" class="tab-pane login-popup__pane active" role="tabpanel">
+                                <h5 class="login-popup__title">Запрос пароля</h5>
+                                <p>Если вы забыли пароль, введите логин или E-Mail.</p>
+                                <p>   Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.</p>
+                                <form>
+                                    <input type="text" placeholder="Логин" required class="login-popup__input">
+                                    <p>или</p>
+                                    <input type="email" placeholder="E-mail" required class="login-popup__input">
+                                    <input  type="submit" class="btn login-popup__submit" value="Выслать">
+                                </form>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Callback modal -->
+            <div class="modal fade callback-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog login-popup__dialog" role="document">
+                    <div class="modal-content login-popup__content">
 
+                        <div class="header login-popup__header">
+                            <ul class="nav nav-tabs tabs login-popup__tabs" role="tablist">
+                                <li class="nav-item  login-popup__tab active" ><a class="login-popup__link"  data-toggle="tab" role="tab" href="#callback">Заказать звонок</a></li>
+                            </ul>
+                            <div class="close login-popup__close" data-dismiss="modal"></div>
+                        </div>
+
+                        <div class="tab-content login-popup__tabs-content">
+                            <div id="callback" class="tab-pane login-popup__pane active" role="tabpanel">
+                                <h5 class="login-popup__title">Вы можете заказать звонок</h5>
+                                <p>Мы перезвоним Вам в течение дня</p>
+                                <form>
+                                    <input type="text" placeholder="Ваше имя" required class="login-popup__input">
+                                    <input type="text" placeholder="Ваш контактный телефон" required class="login-popup__input">
+                                    <input  type="submit" class="btn login-popup__submit" value="Заказать звонок">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
     </header>
 
     @@include('navigation-top.html')
