@@ -40,120 +40,288 @@
 
 
 <!-- Nav tabs -->
-<ul class="nav nav-tabs tabs" role="tablist">
-    <li class="nav-item tabs__item">
-        <a class="nav-link  tabs__link active" data-toggle="tab" role="tab" href="#description">Описание</a>
+<ul class="nav nav-tabs header-tabs __left" role="tablist">
+    <li class="nav-item header-tabs__item">
+        <a class="nav-link  header-tabs__link active" data-toggle="tab" role="tab" href="#description">Описание</a>
     </li>
-    <li class="nav-item  tabs__item">
-        <a class="nav-link   tabs__link " data-toggle="tab" href="#private" role="tab"> Расчет конфигурации</a>
+    <li class="nav-item  header-tabs__item">
+        <a class="nav-link   header-tabs__link " data-toggle="tab" href="#config_calc" role="tab"> Расчет
+            конфигурации</a>
     </li>
-    <li class="nav-item tabs__item">
-        <a class="nav-link  tabs__link active" data-toggle="tab" role="tab" href="#description">  Online дизайнер </a>
+    <li class="nav-item header-tabs__item">
+        <a class="nav-link  header-tabs__link" data-toggle="tab" role="tab" href="#online-design"> Online дизайнер </a>
     </li>
-    <li class="nav-item  tabs__item">
-        <a class="nav-link   tabs__link " data-toggle="tab" href="#private" role="tab">Монтаж</a>
+    <li class="nav-item  header-tabs__item">
+        <a class="nav-link   header-tabs__link " data-toggle="tab" href="#installation" role="tab">Монтаж</a>
     </li>
-    <li class="nav-item tabs__item">
-        <a class="nav-link  tabs__link active" data-toggle="tab" role="tab" href="#description">Проекты</a>
+    <li class="nav-item header-tabs__item">
+        <a class="nav-link  header-tabs__link" data-toggle="tab" role="tab" href="#projects">Проекты</a>
     </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active" id="business" role="tabpanel">
-        <div class="solution-block  left">
-            <div class="solution-block__nav ">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item solution-block__nav-item"><a href="#summer_cafe" data-toggle="tab" role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Летние кафе
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#outdoor_equipment" data-toggle="tab"
-                                                                     role="tab"
-                                                                     class="solution-block__nav-link nav-link active">
-                        Уличное оборудование
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#mass_events" data-toggle="tab" role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Для массовых мероприятий
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#tent_construction" data-toggle="tab"
-                                                                     role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Тентовые конструкции
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#restorans" data-toggle="tab" role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Для витрин и ресторанов
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#individual_order" data-toggle="tab"
-                                                                     role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Индивидуальный заказ
-                    </a></li>
-                    <li class="nav-item solution-block__nav-item"><a href="#pavilions_for_rent" data-toggle="tab"
-                                                                     role="tab"
-                                                                     class="solution-block__nav-link nav-link">
-                        Аренда павильонов
-                    </a></li>
-                </ul>
+    <div class="tab-pane active" id="description" role="tabpanel">
+        <div class="descr-wrap">
+            <div class="characteristics">
+                <table class="characteristics__table">
+                    <tr>
+                        <td>Ширина</td>
+                        <td>до 6 метров</td>
+                    </tr>
+                    <tr>
+                        <td>Вынос</td>
+                        <td>до 1,4 метров</td>
+                    </tr>
+                    <tr>
+                        <td>Управление</td>
+                        <td>ручное, автоматическое</td>
+                    </tr>
+                    <tr>
+                        <td>Комплектующие</td>
+                        <td>Германия</td>
+                    </tr>
+                    <tr>
+                        <td>Ткань</td>
+                        <td>Испания</td>
+                    </tr>
+                    <tr>
+                        <td>Опции</td>
+                        <td>электродвигатель, датчик солнца,
+                            датчик ветра, датчик дождя,
+                            антиветровые стойки,
+                            нанесение печати на ткань
+                        </td>
+                    </tr>
+                </table>
+
             </div>
-            <div class="tab-content solution-block__img">
-                <div class=" tab-pane " id="summer_cafe" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Установка летних кафе — один из самых частых заказов.
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <div class="benefits">
+                <div class="benefits__item">
+                    <div class="benefits__item-img"><img src="img/item-benefit1.png" alt=""></div>
+                    <div class="benefits__item-description">Бесплатный выезд, замер
+                        и оценка
                     </div>
                 </div>
-                <div class=" tab-pane active" id="outdoor_equipment" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Установка уличного оборудования — один из самых частых заказов.
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="benefits__item">
+                    <div class="benefits__item-img"><img src="img/item-benefit2.png" alt=""></div>
+                    <div class="benefits__item-description">3 года гарантии
+                        и сервисного обслуживания
                     </div>
                 </div>
-                <div class=" tab-pane" id="mass_events" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Для массовых мероприятий
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class=" tab-pane" id="tent_construction" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Тентовые конструкции
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class=" tab-pane " id="restorans" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Для витрин и ресторанов
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class=" tab-pane" id="individual_order" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Индивидуальный заказ
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class=" tab-pane" id="pavilions_for_rent" role="tabpanel">
-                    <img src="img/design.jpg" alt="">
-                    <div class="solution-block__bottom-descr">
-                        Аренда павильонов
-                        <a href="" class="solution-block__btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="benefits__item">
+                    <div class="benefits__item-img"><img src="img/item-benefit3.png" alt=""></div>
+                    <div class="benefits__item-description">Дизайн - проект
+                        в подарок
                     </div>
                 </div>
             </div>
+
 
         </div>
+        <p>
+            Иногда самое простое решение оказывается единственно верным. Прямые маркизы (также называются оконными или
+            фасадными) – это непревзойденное сочетание практичности и отличного внешнего вида. Эти доступные и легкие
+            конструкции чаще всего используются над окнами, а также в качестве навесов над балконами, входными дверями,
+            перед торговыми павильонами. Широкая область применения — одно из главных преимуществ фасадных маркиз,
+            наряду с их надежностью, эстетичностью, а также способностью преображаться в зависимости от используемых
+            цветов и материалов – от демократичного навеса над цветочным павильоном до эффектного рекламного инструмента
+            над окнами ювелирного салона.
+        </p>
+        <br><br>
+        <p>
+            Опустить маркизу займет всего несколько секунд – и Вы уже можете в жаркий день работать у открытого окна,
+            без отвлекающих солнечных бликов на мониторе. Сalypso защитит Ваш дом или офис от перегрева, а в пасмурный
+            день ткань маркизы придаст дневному свету приятные оттенки и поднимет настроение. Сделать Вашу жизнь
+            комфортнее легко с нашими маркизами Calypso!
+        </p>
     </div>
+    <div class="tab-pane" id="config_calc" role="tabpanel">
+        <a class="text-link" href="">Как правильно сделать замер?</a>
+        <div class="calc-wrap">
+            <div class="calculator">
 
+                <div class="calc-block">
+                    <div class="calc-block__header">
+                        <div class="orange_mark">
+                            1
+                        </div>
+                        Размер:
+                    </div>
+                    <div class="calc-block__content">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <select class="form-control" id="widthSelect">
+                                    <option>Ширина, см</option>
+                                    <option value="125">125</option>
+                                    <option value="150">150</option>
+                                    <option value="175">175</option>
+                                    <option value="200">200</option>
+                                    <option value="225">225</option>
+                                    <option value="250">250</option>
+                                    <option value="275">275</option>
+                                    <option value="300">300</option>
+                                    <option value="325">325</option>
+                                    <option value="350">350</option>
+                                    <option value="375">375</option>
+                                    <option value="400">400</option>
+                                    <option value="425">425</option>
+                                    <option value="450">450</option>
+                                    <option value="475">475</option>
+                                    <option value="500">500</option>
+                                    <option value="525">525</option>
+                                    <option value="550">550</option>
+                                    <option value="575">575</option>
+                                    <option value="600">600</option>
+                                </select>
+                                <select class="form-control" id="heightSelect">
+                                    <option>Высота, см</option>
+                                    <option value="60">60</option>
+                                    <option value="80">80</option>
+                                    <option value="100">100</option>
+                                    <option value="120">120</option>
+                                    <option value="140">140</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-block">
+                    <div class="calc-block__header">
+                        <div class="orange_mark">2</div>
+                        Ламбрекен:
+                    </div>
+                    <div class="calc-block__content">
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked1" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Нет</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked2" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Круглый</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked3" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Овальный</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked4" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Прямоугольный</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked5" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Квадратный</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked6" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="control-indicator"></span>
+                                <span class="custom-control-description">Волнистый</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-block">
+                    <div class="calc-block__header">
+                        <div class="orange_mark">
+                            3
+                        </div>
+                        Цвет ткани:
+                    </div>
+                    <div class="calc-block__content">
+                        <div class="cloth-choose">
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth1" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2023_alaska_r.jpg" alt="">
+                                </span>
+                            </label>
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth2" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2046_BRISTOL_R.jpg" alt="">
+                                </span>
+                            </label>
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth3" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2090_BRONCE_R.jpg" alt="">
+                                </span>
+                            </label>
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth4" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2102_GRIS_R.jpg" alt="">
+                                </span>
+                            </label>
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth5" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2126_SOL_R.jpg" alt="">
+                                </span>
+                            </label>
+                            <label class="cloth-choose-control custom-radio">
+                                <input id="cloth6" name="radio-stacked" type="radio"
+                                       class="cloth-choose-control-input">
+                                <span class="cloth-choose-indicator">
+                                    <img src="img/cloth/2578_rodas_r.jpg" alt="">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-block">
+                    <div class="calc-block__header">
+                        <div class="orange_mark">
+                            4
+                        </div>
+                        Управление:
+                    </div>
+                    <div class="calc-block__content">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="calc_output">
+
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane " id="online-design" role="tabpanel">
+
+
+    </div>
+    <div class="tab-pane" id="installation" role="tabpanel">
+
+
+    </div>
+    <div class="tab-pane" id="projects" role="tabpanel">
+
+
+    </div>
 </div>
+
+
 
 @@include('partials/footer.html')
 

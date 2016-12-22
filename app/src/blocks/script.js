@@ -43,6 +43,7 @@ $(document).ready(function () {
 
     });
 
+
 //init slider for item-card  with thumbnails
 
 
@@ -80,7 +81,7 @@ $(document).ready(function () {
         grab = $(this).data('info');
 
         slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
-        console.log(slidegrab);
+      //  console.log(slidegrab);
 
        $(this).css("background-image", "url(" + slidegrab + ")");
 
