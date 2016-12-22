@@ -30,13 +30,26 @@ body {
 
 
   &:focus{
-    outline: none;
+    outline: none !important;
+    color: $white;
+  }
+  &:hover{
+    background-color: #ff3d17;
+    border: 1px solid #ff3d17;
+    color: $white;
+
+
   }
   &:active{
     outline: none;
+    background-color: #ed3e0f;
+    border: 1px solid #ed3e0f;
+    color: $white;
+
+
   }
 }
-  .call-button{
+.call-button{
 
   @media (max-width: $main-container) {
     order: 5;
@@ -68,25 +81,11 @@ h2.title {
   margin: 30px 0;
 }
 
-.text-link{
-  position: relative;
-  display: inline-block;
-  color: $dark-gray;
+input:focus {
+  outline: none;
+}
 
-  &:hover{
-    text-decoration: none;
-    color: $dark-gray;
-    &:after{
-      display: none;
-    }
-  }
-
-  &:after{
-    width:100%;
-    content: '';
-    display: block;
-    bottom: 0;
-    position: absolute;
-    border-bottom: solid 1px #dbdbdb;;
-  }
+a:focus {
+  outline: none;
+  text-decoration: none;
 }
