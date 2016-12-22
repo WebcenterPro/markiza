@@ -98,4 +98,20 @@ $(document).ready(function () {
     owl_dot.height(newwidth);
 
 
+/*******************************************************************/
+//switcher in item-card
+
+    // $('.manage-switch input').click(function(){
+    //
+    //     if ($('.manage-switch input').prop( "checked", true )) {
+    //         $('.mechanic_manage').css("display","block");
+    //         $('.auto_manage').css("display","none");
+    //     }
+    //     else{
+    //         $('.auto_manage').css("display","block");
+    //         $('.mechanic_manage').css("display","none");
+    //     }
+    // });
+
+
 });

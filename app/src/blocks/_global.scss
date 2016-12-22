@@ -89,3 +89,27 @@ a:focus {
   outline: none;
   text-decoration: none;
 }
+
+
+  .text-link{
+    position: relative;
+    display: inline-block;
+    color: $dark-gray;
+
+    &:hover{
+      text-decoration: none;
+      color: $dark-gray;
+      &:after{
+        display: none;
+      }
+    }
+
+    &:after{
+      width:100%;
+      content: '';
+      display: block;
+      bottom: 0;
+      position: absolute;
+      border-bottom: solid 1px #dbdbdb;;
+    }
+}

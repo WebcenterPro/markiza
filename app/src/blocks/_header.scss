@@ -99,3 +99,13 @@
     display: block;
   }
 }
+
+.lang-switch {
+  position: relative;
+  width: 120px;
+  text-align: right;
+  align-self: flex-end;
+  margin-right: 5px;
+  top: -9px;
+  order: 6;
+}

@@ -152,7 +152,6 @@
     user-select: none;
     border: solid 1px $gray;
     background-color: transparent;
-
   }
 
   .custom-radio .custom-control-input:checked ~ .control-indicator:after {
@@ -173,7 +172,7 @@
   .cloth-choose-indicator {
     display: inline-block;
     width: 130px;
-    height: 45px;
+    height: 46px;
     border: 2px solid transparent;
 
     &__img {
@@ -182,5 +181,31 @@
   }
   .cloth-choose-control-input:checked ~ .cloth-choose-indicator{
     border: 2px solid $orange;
+  }
+
+  .manage-switch{
+    position: relative;
+    text-align: left;
+
+    .switcher__circle{
+      left:5px;
+    }
+    .switcher__left,.switcher__right{
+      font-weight: $font-regular;
+    }
+    .switcher__left{
+      position: relative;
+    }
+
+    .switcher__backgr:not(checked) + .switcher__circle:before{
+      background-color: $light-gray;
+    }
+  }
+
+  .mechanic_manage{
+    margin-top: 30px;
+  }
+  .auto_manage{
+    display: none;
   }
 }

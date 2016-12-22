@@ -26,16 +26,16 @@
 
 <div class="buttons-wrap">
 
-    <div class="call-button btn btn-small">
+    <a href="#" class="call-button btn btn-small" data-toggle="modal" data-target=".callback-modal">
         <span class="hidden-sm-down">Заказать звонок</span>
         <i class="fa fa-phone hidden-md-up" aria-hidden="true"></i>
-    </div>
-    <div class="btn btn-small">
+    </a>
+    <a href="#" class="call-button btn btn-small" data-toggle="modal" data-target=".order-dimension">
         <span class="">Вызвать замерщика</span>
-    </div>
-    <div class="btn btn-small">
+    </a>
+    <a href="#" class="call-button btn btn-small">
         <span class="">Рассчитать конфигурацию</span>
-    </div>
+    </a>
 </div>
 
 
@@ -297,13 +297,107 @@
                         Управление:
                     </div>
                     <div class="calc-block__content">
+                        <div class="switcher manage-switch hidden-sm-down">
+                            <div class="switcher__left">Механическое</div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <div class="slide-circle round"></div>
+                            </label>
+                            <!--<input type="checkbox" name="langswitch" class="switcher__backgr" id="manage-switch"/>-->
+                            <!--<label class="switcher__circle" for="manage-switch"></label>-->
+                            <div class="switcher__right">Автоматическое</div>
+                        </div>
+                        <div class="mechanic_manage">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <select class="form-control" id="lengthSelect">
+                                        <option>Длина воротка, мм</option>
+                                        <option value="0">1400</option>
+                                        <option value="1">1600</option>
+                                        <option value="2">1800</option>
+                                        <option value="3">2000</option>
+                                        <option value="4">2200</option>
+                                        <option value="5">2400</option>
+                                        <option value="6">2600</option>
+                                        <option value="7">2800</option>
+                                        <option value="8">3000</option>
+
+                                    </select>
+                                    <select class="form-control" id="sideSelect">
+                                        <option>Сторона крепления</option>
+                                        <option value="Слева">Слева</option>
+                                        <option value="Справа">Справа</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auto_manage">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <select class="form-control" id="modeSelect">
+                                        <option>Режим управления</option>
+                                        <option value="0">Пульт</option>
+                                        <option value="1">Клавиша</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
+
                 </div>
 
             </div>
             <div class="calc_output">
-
+                <table class="output-table">
+                    <thead >Ваш заказ</thead>
+                    <tbody>
+                    <tr>
+                        <td>Размер:</td>
+                        <td>300х140 см</td>
+                    </tr>
+                    <tr>
+                        <td>Ламбрекен:</td>
+                        <td>прямой</td>
+                    </tr>
+                    <tr>
+                        <td>Цвет ткани:</td>
+                        <td>2926  natural</td>
+                    </tr>
+                    <tr>
+                        <td>Управление:</td>
+                        <td>автоматическое</td>
+                    </tr>
+                    <tr>
+                        <td>Аварийное выключение:</td>
+                        <td>да</td>
+                    </tr>
+                    <tr>
+                        <td>Режим:</td>
+                        <td>да</td>
+                    </tr>
+                    <tr>
+                        <td>Датчик солнца/ветра:</td>
+                        <td>да</td>
+                    </tr>
+                    <tr>
+                        <td>Датчик дождя:</td>
+                        <td>да</td>
+                    </tr>
+                    <tr>
+                        <td>Датчик ветра:</td>
+                        <td>3D беспроводной </td>
+                    </tr>
+                    <tr>
+                        <td>Количество:</td>
+                        <td>30 шт.</td>
+                    </tr>
+                    <tr>
+                        <td>Цена:      </td>
+                        <td>450 000 руб.</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -320,7 +414,6 @@
 
     </div>
 </div>
-
 
 
 @@include('partials/footer.html')
