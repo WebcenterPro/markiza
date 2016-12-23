@@ -1,111 +1,101 @@
+//
+//.switcher {
+//  &__backgr + label {
+//    cursor: pointer;
+//  }
+//
+//  /* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+//  Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+//  в них все нижеследующие стили не сработают. */
+//
+//  /* Прячем оригинальный чекбокс. */
+//  &__backgr:not(checked) {
+//    position: absolute;
+//    opacity: 0;
+//  }
+//
+//  &__backgr:not(checked) + &__circle {
+//    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+//    padding: 0 0 0 55px; /* оставляем слева от label место под псевдочекбокс */
+//
+//  }
+//  /* Оформление первой части чекбокса в выключенном состоянии (фон). */
+//  &__backgr:not(checked) + &__circle:before {
+//    content: '';
+//    position: absolute;
+//    left: 0;
+//    top: -5px;
+//    width: 47px;
+//    height: 23px;
+//    border-radius: 20px;
+//    background: $gray;
+//    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
+//  }
+//  /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+//  &__backgr:not(checked) + &__circle:after {
+//    content: '';
+//    position: absolute;
+//    width: 17px;
+//    margin: 0px;
+//    top: -2px;
+//    left: 4px;
+//    height: 17px;
+//    border-radius: 15px;
+//    background: $orange;
+//    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+//    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+//  }
+//
+//  /* Сдвигаем переключатель чекбокса, когда он включен. */
+//  &__backgr:checked + &__circle:after {
+//    left: 26px;
+//  }
+//
+//  &__backgr:not(checked) ~ &__right {
+//    color: $font_light-gray;
+//
+//    &:after {
+//      content: '';
+//      display: block;
+//      width: 100%;
+//      position: absolute;
+//      bottom: 0px;
+//      border-bottom: dotted 2px $font_light-gray;
+//    }
+//  }
+//
+//  &__backgr:not(checked) ~ &__left {
+//    color: $dark-gray;
+//
+//    &:after {
+//      display: none;
+//    }
+//  }
+//
+//  &__backgr:checked ~ &__right {
+//    color: $dark-gray;
+//
+//    &:after {
+//      display: none;
+//    }
+//  }
+//
+//  &__backgr:checked ~ &__right {
+//    color: $font_light-gray;
+//
+//    &:after {
+//      content: '';
+//      display: block;
+//      width: 100%;
+//      position: absolute;
+//      bottom: 0px;
+//      border-bottom: dotted 2px $font_light-gray;
+//
+//    }
+//  }
+//}
 
-.switcher {
-  &__backgr + label {
-    cursor: pointer;
-  }
-
-  /* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
-  Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
-  в них все нижеследующие стили не сработают. */
-
-  /* Прячем оригинальный чекбокс. */
-  &__backgr:not(checked) {
-    position: absolute;
-    opacity: 0;
-  }
-
-  &__backgr:not(checked) + &__circle {
-    position: relative; /* будем позиционировать псевдочекбокс относительно label */
-    padding: 0 0 0 55px; /* оставляем слева от label место под псевдочекбокс */
-
-  }
-  /* Оформление первой части чекбокса в выключенном состоянии (фон). */
-  &__backgr:not(checked) + &__circle:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -5px;
-    width: 47px;
-    height: 23px;
-    border-radius: 20px;
-    background: $gray;
-    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
-  }
-  /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
-  &__backgr:not(checked) + &__circle:after {
-    content: '';
-    position: absolute;
-    width: 17px;
-    margin: 0px;
-    top: -2px;
-    left: 4px;
-    height: 17px;
-    border-radius: 15px;
-    background: $orange;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
-  }
-
-  /* Сдвигаем переключатель чекбокса, когда он включен. */
-  &__backgr:checked + &__circle:after {
-    left: 26px;
-  }
-
-  &__left, &__right {
-    display: inline-block;
-    position: relative;
-    font-weight: $font-semibold;
-    font-size: 16px;
-    top: 4px;
-  }
-  &__left {
-    position: absolute;
-    left: 4px;
-  }
-  &__backgr:not(checked) ~ &__right {
-    color: $font_light-gray;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      position: absolute;
-      bottom: 0px;
-      border-bottom: dotted 2px $font_light-gray;
-    }
-  }
-
-  &__backgr:not(checked) ~ &__left {
-    color: $dark-gray;
-
-    &:after {
-      display: none;
-    }
-  }
-
-  &__backgr:checked ~ &__right {
-    color: $dark-gray;
-
-    &:after {
-      display: none;
-    }
-  }
-
-  &__backgr:checked ~ &__right {
-    color: $font_light-gray;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      position: absolute;
-      bottom: 0px;
-      border-bottom: dotted 2px $font_light-gray;
-
-    }
-  }
-}
-
+/******************************************/
 .switcher {
   /* The switch - the box around the slider */
   .switch {
@@ -129,7 +119,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:  $font_light-gray;
+    background-color: $font_light-gray;
     -webkit-transition: .4s;
     transition: .4s;
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
@@ -151,7 +141,6 @@
     background-color: $font_light-gray;
   }
 
-
   input:checked + .slide-circle:before {
     transform: translateX(25px);
   }
@@ -163,5 +152,33 @@
 
   .slide-circle.round:before {
     border-radius: 50%;
+  }
+
+  &__left, &__right {
+    display: inline-block;
+    position: relative;
+    font-weight: $font-semibold;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  &__left{
+    margin-right: 5px;
+  }
+  &__right{
+    margin-left: 5px;
+  }
+}
+
+.gray-switch {
+  color: $font_light-gray;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-bottom: dotted 2px $font_light-gray;
+
   }
 }

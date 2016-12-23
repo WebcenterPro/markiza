@@ -76,14 +76,14 @@ $(document).ready(function () {
     });
 
     // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
-   owl_dot.each(function () {
+    owl_dot.each(function () {
 
         grab = $(this).data('info');
 
         slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
-      //  console.log(slidegrab);
+        //  console.log(slidegrab);
 
-       $(this).css("background-image", "url(" + slidegrab + ")");
+        $(this).css("background-image", "url(" + slidegrab + ")");
 
     });
 
@@ -93,25 +93,22 @@ $(document).ready(function () {
     gotowidth = 98 / amount;
 
     owl_dot.css("width", gotowidth + "%");
-    newwidth = owl_dot.width()/1.5;
+    newwidth = owl_dot.width() / 1.5;
 
     owl_dot.height(newwidth);
 
 
-/*******************************************************************/
+    /*******************************************************************/
 //switcher in item-card
 
-    // $('.manage-switch input').click(function(){
-    //
-    //     if ($('.manage-switch input').prop( "checked", true )) {
-    //         $('.mechanic_manage').css("display","block");
-    //         $('.auto_manage').css("display","none");
-    //     }
-    //     else{
-    //         $('.auto_manage').css("display","block");
-    //         $('.mechanic_manage').css("display","none");
-    //     }
-    // });
+    $('.switch input').click(function () {
+        $(this).parent().prev().toggleClass('gray-switch');
+        $(this).parent().next().toggleClass('gray-switch');
+        $(this).parent().parent().siblings().toggleClass('__hidden');
+    });
 
+    $("#wind-check").click(function () {
+        $(this).parent().next().toggleClass('__hidden');
+    });
 
 });

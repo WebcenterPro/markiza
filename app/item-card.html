@@ -61,7 +61,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active" id="description" role="tabpanel">
+    <div class="tab-pane " id="description" role="tabpanel">
         <div class="descr-wrap">
             <div class="characteristics">
                 <table class="characteristics__table">
@@ -193,7 +193,7 @@
                         Ламбрекен:
                     </div>
                     <div class="calc-block__content">
-                        <div class="custom-controls-stacked">
+                        <div class="custom-controls-half-stacked">
                             <label class="custom-control custom-radio">
                                 <input id="radioStacked1" name="radio-stacked" type="radio"
                                        class="custom-control-input">
@@ -297,15 +297,13 @@
                         Управление:
                     </div>
                     <div class="calc-block__content">
-                        <div class="switcher manage-switch hidden-sm-down">
+                        <div class="switcher manage-switch">
                             <div class="switcher__left">Механическое</div>
                             <label class="switch">
                                 <input type="checkbox">
                                 <div class="slide-circle round"></div>
                             </label>
-                            <!--<input type="checkbox" name="langswitch" class="switcher__backgr" id="manage-switch"/>-->
-                            <!--<label class="switcher__circle" for="manage-switch"></label>-->
-                            <div class="switcher__right">Автоматическое</div>
+                            <div class="switcher__right gray-switch">Автоматическое</div>
                         </div>
                         <div class="mechanic_manage">
                             <div class="form-inline">
@@ -331,7 +329,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="auto_manage">
+                        <div class="auto_manage __hidden">
                             <div class="form-inline">
                                 <div class="form-group">
                                     <select class="form-control" id="modeSelect">
@@ -339,6 +337,46 @@
                                         <option value="0">Пульт</option>
                                         <option value="1">Клавиша</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="custom-controls-stacked">
+                                <label class="custom-control custom-checkbox">
+                                    <input id="check1" type="checkbox"
+                                           class="custom-control-input">
+                                    <span class="control-indicator"></span>
+                                    <span class="custom-control-description">Аварийное выключение</span>
+                                </label>
+                                <label class="custom-control custom-checkbox">
+                                    <input id="check2" type="checkbox"
+                                           class="custom-control-input">
+                                    <span class="control-indicator"></span>
+                                    <span class="custom-control-description">Датчик солнца/ветра</span>
+                                </label>
+                                <label class="custom-control custom-checkbox">
+                                    <input id="check3" type="checkbox"
+                                           class="custom-control-input">
+                                    <span class="control-indicator"></span>
+                                    <span class="custom-control-description">Датчик дождя</span>
+                                </label>
+                                <label class="custom-control custom-checkbox">
+                                    <input id="wind-check" type="checkbox"
+                                           class="custom-control-input">
+                                    <span class="control-indicator"></span>
+                                    <span class="custom-control-description">Датчик ветра</span>
+                                </label>
+                                <div class="wind_checked __hidden">
+                                    <label class="custom-control custom-radio">
+                                        <input id="radio1" name="radio-stacked" type="radio"
+                                               class="custom-control-input">
+                                        <span class="control-indicator"></span>
+                                        <span class="custom-control-description">Беспроводной</span>
+                                    </label>
+                                    <label class="custom-control custom-radio">
+                                        <input id="radio2" name="radio-stacked" type="radio"
+                                               class="custom-control-input">
+                                        <span class="control-indicator"></span>
+                                        <span class="custom-control-description">Проводной</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -349,55 +387,62 @@
 
             </div>
             <div class="calc_output">
-                <table class="output-table">
-                    <thead >Ваш заказ</thead>
-                    <tbody>
-                    <tr>
-                        <td>Размер:</td>
-                        <td>300х140 см</td>
-                    </tr>
-                    <tr>
-                        <td>Ламбрекен:</td>
-                        <td>прямой</td>
-                    </tr>
-                    <tr>
-                        <td>Цвет ткани:</td>
-                        <td>2926  natural</td>
-                    </tr>
-                    <tr>
-                        <td>Управление:</td>
-                        <td>автоматическое</td>
-                    </tr>
-                    <tr>
-                        <td>Аварийное выключение:</td>
-                        <td>да</td>
-                    </tr>
-                    <tr>
-                        <td>Режим:</td>
-                        <td>да</td>
-                    </tr>
-                    <tr>
-                        <td>Датчик солнца/ветра:</td>
-                        <td>да</td>
-                    </tr>
-                    <tr>
-                        <td>Датчик дождя:</td>
-                        <td>да</td>
-                    </tr>
-                    <tr>
-                        <td>Датчик ветра:</td>
-                        <td>3D беспроводной </td>
-                    </tr>
-                    <tr>
-                        <td>Количество:</td>
-                        <td>30 шт.</td>
-                    </tr>
-                    <tr>
-                        <td>Цена:      </td>
-                        <td>450 000 руб.</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="calc_output__bg">
+                    <table class="output-table">
+                        <thead class="output-table__head">
+                        Ваш заказ
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Размер:</td>
+                            <td>300х140 см</td>
+                        </tr>
+                        <tr>
+                            <td>Ламбрекен:</td>
+                            <td>прямой</td>
+                        </tr>
+                        <tr>
+                            <td>Цвет ткани:</td>
+                            <td>2926 natural</td>
+                        </tr>
+                        <tr>
+                            <td>Управление:</td>
+                            <td>автоматическое</td>
+                        </tr>
+                        <tr>
+                            <td>Аварийное выключение:</td>
+                            <td>да</td>
+                        </tr>
+                        <tr>
+                            <td>Режим:</td>
+                            <td>да</td>
+                        </tr>
+                        <tr>
+                            <td>Датчик солнца/ветра:</td>
+                            <td>да</td>
+                        </tr>
+                        <tr>
+                            <td>Датчик дождя:</td>
+                            <td>да</td>
+                        </tr>
+                        <tr>
+                            <td>Датчик ветра:</td>
+                            <td>3D беспроводной</td>
+                        </tr>
+                        <tr>
+                            <td>Количество:</td>
+                            <td>30 шт.</td>
+                        </tr>
+                        <tr class="output-table__price">
+                            <td>Цена:</td>
+                            <td>450 000 руб.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="call-button btn btn-small">
+                        Оформить заказ
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -405,13 +450,70 @@
 
 
     </div>
-    <div class="tab-pane" id="installation" role="tabpanel">
+    <div class="tab-pane  " id="installation" role="tabpanel">
+
+        <div class="file-download">
+            <div class="file-download__descr">
+                Инструкция по сборке
+            </div>
+            <div class="file-download__button">
+                <a href="#" class="call-button btn btn-small">
+                    Скачать
+                </a>
+            </div>
+        </div>
+        <div class="file-download">
+            <div class="file-download__descr">
+                Инструкция по эксплуатации и уходу
+            </div>
+            <div class="file-download__button">
+                <a href="#" class="call-button btn btn-small">
+                    Скачать
+                </a>
+            </div>
+        </div>
 
 
     </div>
-    <div class="tab-pane" id="projects" role="tabpanel">
-
-
+    <div class="tab-pane active" id="projects" role="tabpanel">
+        <div class="projects-wrap">
+            <div class="project-block">
+                <div class="project-block__img">
+                    <img src="img/portf1.jpg" alt="">
+                </div>
+                <div class="project-block__info">
+                    <div class="project-block__place">Москва</div>
+                    <div class="project-block__date">10/2016</div>
+                </div>
+                <div class="project-block__name">
+                    <a href="" class="text-link">Bosco di Chiliegi</a>
+                </div>
+            </div>
+            <div class="project-block">
+                <div class="project-block__img">
+                    <img src="img/portf2.jpg" alt="">
+                </div>
+                <div class="project-block__info">
+                    <div class="project-block__place">Москва</div>
+                    <div class="project-block__date">08/2016</div>
+                </div>
+                <div class="project-block__name">
+                    <a href="" class="text-link">  Орлоffский хлеб</a>
+                </div>
+            </div>
+            <div class="project-block">
+                <div class="project-block__img">
+                    <img src="img/portf3.jpg" alt="">
+                </div>
+                <div class="project-block__info">
+                    <div class="project-block__place">Москва</div>
+                    <div class="project-block__date">07/2016</div>
+                </div>
+                <div class="project-block__name">
+                    <a href="" class="text-link">  Кофейня Doppio</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

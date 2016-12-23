@@ -21,7 +21,9 @@
     display: inline-block;
 
     &__table {
+
       height: 100%;
+
       tr {
         border-bottom: solid 1px $light-gray;
       }
@@ -121,11 +123,30 @@
   }
 
   .calc_output {
+
     width: 45%;
     display: inline-block;
-    background-color: $light-gray;
   }
+  .calc_output__bg {
 
+    display: block;
+    background-color: $light-gray;
+    text-align: center;
+    padding: 0 30px 15px;
+
+  }
+  .output-table {
+    width: 100%;
+    text-align: left;
+    &__head, &__price {
+      font-size: 18px;
+      font-weight: $font-semibold;
+      padding: 15px 0;
+    }
+    &__price {
+
+    }
+  }
   .custom-controls-stacked {
 
     display: flex;
@@ -133,37 +154,20 @@
 
     .custom-control {
       float: none;
-      width: 50%;
+      width: 100%;
+      margin-bottom: 12px;
     }
   }
+  .custom-controls-half-stacked {
 
-  .control-indicator {
-    position: absolute;
-    top: .25rem;
-    left: 0;
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: solid 1px $gray;
-    background-color: transparent;
-  }
+    display: flex;
+    flex-wrap: wrap;
 
-  .custom-radio .custom-control-input:checked ~ .control-indicator:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    top: 0.20rem;
-    left: 0.20rem;
-    background-color: $orange;
-    border-radius: 50%;
+    .custom-control {
+      float: none;
+      width: 50%;
+      margin-left: 0;
+    }
   }
 
   .cloth-choose-control-input {
@@ -179,33 +183,75 @@
       width: 100%;
     }
   }
-  .cloth-choose-control-input:checked ~ .cloth-choose-indicator{
+  .cloth-choose-control-input:checked ~ .cloth-choose-indicator {
     border: 2px solid $orange;
   }
 
-  .manage-switch{
+  .manage-switch {
     position: relative;
     text-align: left;
 
-    .switcher__circle{
-      left:5px;
+    .switcher__circle {
+      left: 5px;
     }
-    .switcher__left,.switcher__right{
+    .switcher__left, .switcher__right {
       font-weight: $font-regular;
     }
-    .switcher__left{
+    .switcher__left {
       position: relative;
     }
 
-    .switcher__backgr:not(checked) + .switcher__circle:before{
+    .switcher__backgr:not(checked) + .switcher__circle:before {
       background-color: $light-gray;
     }
   }
 
-  .mechanic_manage{
+  .mechanic_manage, .auto_manage {
     margin-top: 30px;
   }
-  .auto_manage{
-    display: none;
+
+}
+
+.auto_manage .form-inline {
+  margin-bottom: 20px;
+}
+
+.wind_checked {
+  padding-left: 20px;
+}
+
+.file-download {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-bottom: 30px;
+
+  &__descr {
+    width: 60%;
+    align-items: center;
+    display: flex;
+
+  }
+  &__button {
+    width: 40%;
+
+  }
+}
+
+.projects-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-block{
+
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    color: $gray;
+    font-size: 14px;
+  }
+  &__img{
+    border:1px solid $light-gray;
   }
 }
