@@ -5,6 +5,10 @@ body {
 .content {
   margin-left: 265px;
   padding: 0 20px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
 
   @media (min-width: $xl) {
     padding: 0 70px;
@@ -16,6 +20,11 @@ body {
   }
 }
 
+.container-fluid {
+  flex: 1;
+  width: 100%;
+  padding: 0;
+}
 
 .btn {
   background: $orange;
@@ -28,28 +37,48 @@ body {
   align-self: flex-end;
   margin: 0 5px 0 0;
 
-
-  &:focus{
+  &:focus {
     outline: none !important;
     color: $white;
   }
-  &:hover{
+  &:hover {
     background-color: #ff3d17;
     border: 1px solid #ff3d17;
     color: $white;
 
-
   }
-  &:active{
+  &:active {
     outline: none;
     background-color: #ed3e0f;
     border: 1px solid #ed3e0f;
     color: $white;
 
-
   }
 }
-.call-button{
+
+.btn-white {
+  background: $white;
+  color: $dark-gray;
+  border: 1px solid $orange;
+
+  &:focus {
+
+    color: $dark-gray;
+  }
+
+  &:hover {
+    background: $orange;
+    color: $white;
+  }
+  &:active {
+    outline: none;
+    background-color: #ff3d17;
+    color: $white;
+  }
+
+}
+
+.call-button {
 
   @media (max-width: $main-container) {
     order: 5;
@@ -57,7 +86,6 @@ body {
   @media (max-width: $hide-numbers) {
     order: 4;
   }
-
 
 }
 
@@ -90,30 +118,96 @@ a:focus {
   text-decoration: none;
 }
 
+.text-link {
+  position: relative;
+  display: inline-block;
+  color: $dark-gray;
 
-  .text-link{
-    position: relative;
-    display: inline-block;
+  &:hover {
+    text-decoration: none;
     color: $dark-gray;
+    cursor: pointer;
+    &:after {
+      display: none;
+    }
+  }
 
-    &:hover{
-      text-decoration: none;
+  &:after {
+    width: 100%;
+    content: '';
+    display: block;
+    bottom: 0;
+    position: absolute;
+    border-bottom: solid 1px #dbdbdb;;
+  }
+}
+
+.__hidden {
+  display: none;
+}
+
+.faq{
+  .card {
+    margin: 0;
+    &:first-child{
+
+      .card-header {
+        border-top: 1px solid $light-gray;
+      }
+    }
+  }
+
+
+
+  .card-header {
+    border: solid 1px $light-gray;
+    border-top: transparent;
+    padding-left: 40px;
+    position: relative;
+
+    a {
       color: $dark-gray;
-      &:after{
-        display: none;
+      &:hover {
+        text-decoration: none;
       }
     }
 
-    &:after{
-      width:100%;
+    &:before {
       content: '';
+      width: 9px;
+      height: 9px;
+      left: 15px;
+      top: 20px;
       display: block;
-      bottom: 0;
       position: absolute;
-      border-bottom: solid 1px #dbdbdb;;
+      border: solid 1px $light-gray;
+      transform: rotate(45deg);
     }
-}
-
-  .__hidden{
-    display: none;
   }
+
+  .card-header.active {
+    border: solid 1px $orange !important;
+
+    a {
+      font-weight: $font-semibold;
+    }
+
+    &:before {
+      border: solid 1px $orange;
+      background-color: $orange;
+    }
+  }
+
+  .card-block {
+    border: solid 1px $light-gray;
+    border-top: transparent;
+    background-color: #F9F9F9;
+    padding-left: 40px;
+
+    a {
+      color: $orange;
+    }
+
+  }
+
+}

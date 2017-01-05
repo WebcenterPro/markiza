@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('partials/head.html')
+    <title>Contacts</title>
+</head>
+<body>
+@@include('partials/side-menu.html')
+@@include('partials/header.html')
+
+<div class="contacts-wrap">
+    <div class="cities">
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card">
+                <div class="card-header active" role="tab" id="spb">
+
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Санкт-Петербург
+                        </a>
+
+                </div>
+
+                <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="spb">
+                    <div class="card-block">
+                        <div class="address">
+                            <div class="card-block__title">
+                                Адрес
+                            </div>
+                            <div class="card-block__content">
+                                Звенигородская д.32
+                            </div>
+                        </div>
+                        <div class="e-mail">
+                            <div class="card-block__title">
+                                E-mail
+                            </div>
+                            <div class="card-block__content">
+                                info@markiza.ru
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <div class="card-block__title">
+                                Телефон
+                            </div>
+                            <div class="card-block__content">
+                                +7 (812) 572-44-44
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="msc">
+
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Москва
+                        </a>
+
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="msc">
+                    <div class="card-block">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="rus">
+
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Россия
+                        </a>
+
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="rus">
+                    <div class="card-block">
+                        Если Вы находитесь не в Москве или Санкт-Петербурге, вы можете позвонить нам по бесплатному многоканальному телефону
+                        <div class="bold">
+                            8 (800) 555-98-77
+                        </div>
+                        <a href="" class="text-link">
+                            Наши партнеры в России
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+
+    </div>
+</div>
+
+
+@@include('partials/footer.html')
+
+</body>
+</html>

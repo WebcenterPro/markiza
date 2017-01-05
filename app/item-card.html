@@ -27,13 +27,12 @@
 <div class="buttons-wrap">
 
     <a href="#" class="call-button btn btn-small" data-toggle="modal" data-target=".callback-modal">
-        <span class="hidden-sm-down">Заказать звонок</span>
-        <i class="fa fa-phone hidden-md-up" aria-hidden="true"></i>
+        <span >Заказать звонок</span>
     </a>
     <a href="#" class="call-button btn btn-small" data-toggle="modal" data-target=".order-dimension">
         <span class="">Вызвать замерщика</span>
     </a>
-    <a href="#" class="call-button btn btn-small">
+    <a href="#config_calc" id="configuration" class="call-button btn btn-small hidden-sm-down ">
         <span class="">Рассчитать конфигурацию</span>
     </a>
 </div>
@@ -61,7 +60,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane " id="description" role="tabpanel">
+    <div class="tab-pane active" id="description" role="tabpanel">
         <div class="descr-wrap">
             <div class="characteristics">
                 <table class="characteristics__table">
@@ -389,53 +388,53 @@
             <div class="calc_output">
                 <div class="calc_output__bg">
                     <table class="output-table">
-                        <thead class="output-table__head">
-                        Ваш заказ
-                        </thead>
+                        <div class="output-table__head">
+                            Ваш заказ
+                        </div>
                         <tbody>
                         <tr>
                             <td>Размер:</td>
-                            <td>300х140 см</td>
+                            <td class="output-table__gray" >300х140 см</td>
                         </tr>
                         <tr>
                             <td>Ламбрекен:</td>
-                            <td>прямой</td>
+                            <td class="output-table__gray">прямой</td>
                         </tr>
                         <tr>
                             <td>Цвет ткани:</td>
-                            <td>2926 natural</td>
+                            <td class="output-table__gray">2926 natural</td>
                         </tr>
                         <tr>
                             <td>Управление:</td>
-                            <td>автоматическое</td>
+                            <td class="output-table__gray">автоматическое</td>
                         </tr>
                         <tr>
                             <td>Аварийное выключение:</td>
-                            <td>да</td>
+                            <td class="output-table__gray" >да</td>
                         </tr>
                         <tr>
                             <td>Режим:</td>
-                            <td>да</td>
+                            <td class="output-table__gray">да</td>
                         </tr>
                         <tr>
                             <td>Датчик солнца/ветра:</td>
-                            <td>да</td>
+                            <td class="output-table__gray">да</td>
                         </tr>
                         <tr>
                             <td>Датчик дождя:</td>
-                            <td>да</td>
+                            <td class="output-table__gray">да</td>
                         </tr>
                         <tr>
                             <td>Датчик ветра:</td>
-                            <td>3D беспроводной</td>
+                            <td class="output-table__gray">3D беспроводной</td>
                         </tr>
                         <tr>
                             <td>Количество:</td>
-                            <td>30 шт.</td>
+                            <td class="output-table__gray">30 шт.</td>
                         </tr>
                         <tr class="output-table__price">
                             <td>Цена:</td>
-                            <td>450 000 руб.</td>
+                            <td>450 000 <span class="rubles">руб.</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -475,11 +474,11 @@
 
 
     </div>
-    <div class="tab-pane active" id="projects" role="tabpanel">
+    <div class="tab-pane " id="projects" role="tabpanel">
         <div class="projects-wrap">
             <div class="project-block">
                 <div class="project-block__img">
-                    <img src="img/portf1.jpg" alt="">
+                    <a href=""> <img src="img/portf1.jpg" alt=""></a>
                 </div>
                 <div class="project-block__info">
                     <div class="project-block__place">Москва</div>
@@ -491,7 +490,7 @@
             </div>
             <div class="project-block">
                 <div class="project-block__img">
-                    <img src="img/portf2.jpg" alt="">
+                    <a href=""> <img src="img/portf2.jpg" alt=""></a>
                 </div>
                 <div class="project-block__info">
                     <div class="project-block__place">Москва</div>
@@ -503,7 +502,7 @@
             </div>
             <div class="project-block">
                 <div class="project-block__img">
-                    <img src="img/portf3.jpg" alt="">
+                    <a href=""> <img src="img/portf3.jpg" alt=""></a>
                 </div>
                 <div class="project-block__info">
                     <div class="project-block__place">Москва</div>

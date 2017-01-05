@@ -57,3 +57,21 @@
 .bold{
   font-weight:$font-bold;
 }
+
+
+
+.__gray{
+  background-color:   $gray-bg;
+  font-size: 0;
+  margin: 0 -20px;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+
+  @media (min-width: $xl){
+    margin: 0 -70px;
+    margin-bottom: 30px;
+    padding: 25px 70px;
+  }
+
+}

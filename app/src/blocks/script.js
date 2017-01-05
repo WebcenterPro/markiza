@@ -101,7 +101,8 @@ $(document).ready(function () {
     /*******************************************************************/
 //switcher in item-card
 
-    $('.switch input').click(function () {
+
+    $('.manage-switch input').click(function () {
         $(this).parent().prev().toggleClass('gray-switch');
         $(this).parent().next().toggleClass('gray-switch');
         $(this).parent().parent().siblings().toggleClass('__hidden');
@@ -111,4 +112,31 @@ $(document).ready(function () {
         $(this).parent().next().toggleClass('__hidden');
     });
 
+//config button  in  item-card
+
+
+
+    $('#configuration').click(function(){
+
+        console.log('click');
+
+        $('.header-tabs li a').removeClass('active');
+
+        $("a[href='#config_calc']").addClass('active');
+        $('.tab-pane').removeClass('active');
+        $('#config_calc').addClass('active');
+
+    });
+
+//active class in accordion
+
+    $('#accordion .card-header a').click(function(){
+        $(this).parent().toggleClass('active');
+        $('#accordion .card-header a').not($(this)).parent().removeClass('active');
+    });
+
+
 });
+
+
+

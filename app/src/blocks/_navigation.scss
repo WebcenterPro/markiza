@@ -30,6 +30,12 @@
     &:hover:after{
       width:42px;
     }
+
+    &.active{
+      &:after{
+        width:42px;
+      }
+    }
   }
 
   &__btn {
