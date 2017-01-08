@@ -4,16 +4,15 @@
   top: 0;
   bottom: 0;
   height: 100%;
-  margin-left: 3px;
   //box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   z-index: 101;
   background: #fff;
   transform: translateX(0px);
-  width: 260px;
+  width: 265px;
   transition: transform 0.3s ease;
 
   @media (min-width: $xl){
-    width: 320px;
+    width: 325px;
   }
 
   @media (max-width: $tablet) {
@@ -52,7 +51,7 @@
   }
 
   &.small-view{
-    transform: translateX(-230px);
+    transform: translateX(-235px);
   }
 }
 

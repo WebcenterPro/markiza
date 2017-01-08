@@ -1,3 +1,17 @@
+.portfolio-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  @media (max-width: $xs) {
+    justify-content: center;
+  }
+
+  .inner-wrap {
+    padding: 20px 25px;
+  }
+}
 
 .example-horizontal {
 
@@ -91,6 +105,58 @@
     }
     @media (max-width: $xxs) {
       font-size: 3vw;
+    }
+  }
+}
+
+.portfolio-card-details-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $xs) {
+    flex-wrap: wrap;
+  }
+  .detail-info {
+    width: 67%;
+
+    @media (max-width: $xs) {
+
+      width: 100%;
+
+      .catalogue-section__content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    }
+    .catalogue-block {
+      width: 49%;
+      @media (max-width: $xs) {
+        width: 60%;
+      }
+      @media (max-width: $xxs) {
+        width: 100%;
+      }
+    }
+  }
+  .short-info {
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+
+    @media (max-width: $xs) {
+
+      width: 100%;
+    }
+    @media (min-width: $l) {
+      font-size: 14px;
+    }
+
+      .call-button{
+      margin-top: 25px;
+
+      @media (min-width: $xs) {
+        width:100%;
+      }
     }
   }
 }

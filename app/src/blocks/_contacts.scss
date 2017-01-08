@@ -1,9 +1,18 @@
 .contacts-wrap {
   display: flex;
+
+  @media(max-width: $xs) {
+    flex-wrap: wrap;
+  }
+
 }
 
 .cities {
   width: 35%;
+
+  @media(max-width: $xs) {
+    width:  100%;
+  }
 
   .card-header {
     position: relative;
@@ -89,5 +98,9 @@ margin-bottom: 5px;
 
 .map {
   width: 65%;
+
+  @media(max-width: $xs) {
+    width:  100%;
+  }
 }
 

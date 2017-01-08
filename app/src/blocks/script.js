@@ -11,6 +11,23 @@ $(document).ready(function () {
         items: 1
     });
 
+    $('.news-slider').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        navText: ["", ""],
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            540: {
+                nav: true
+            }
+        }
+    });
+
 
     $('.owl-carousel.client-slider').owlCarousel({
         loop: true,
@@ -44,61 +61,114 @@ $(document).ready(function () {
     });
 
 
-//init slider for item-card  with thumbnails
+//init slider with thumbnails for item-card, fabric-card, portfolio-card
 
+var itemcard = '.itemcard-slider';
+var portfoliocard = '.portfolio-card-slider';
+var fabriccard = '.fabric-card-slider';
 
-    $('.itemcard-slider').owlCarousel({
+    $(itemcard ).owlCarousel({
         loop: true,
         nav: true,
         dots: true,
         autoplay: true,
         navText: ["", ""],
-        items: 1
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            540: {
+                nav: true
+            }
+        }
     });
+    create_thumbnails(itemcard );
 
-    // 1) ASSIGN EACH 'DOT' A NUMBER
-    dotcount = 1;
-    var owl_dot = $('.itemcard-slider .owl-dot');
-    var owl_item = $('.itemcard-slider .owl-item');
-
-    owl_dot.each(function () {
-        $(this).addClass('dotnumber' + dotcount);
-        $(this).attr('data-info', dotcount);
-        dotcount = dotcount + 1;
+    $(fabriccard ).owlCarousel({
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        navText: ["", ""],
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            540: {
+                nav: true
+            }
+        }
     });
+    create_thumbnails(fabriccard );
 
-    // 2) ASSIGN EACH 'SLIDE' A NUMBER
-    slidecount = 1;
-
-    owl_item.not('.cloned').each(function () {
-        $(this).addClass('slidenumber' + slidecount);
-        slidecount = slidecount + 1;
+    $(portfoliocard).owlCarousel({
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        navText: ["", ""],
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            540: {
+                nav: true
+            }
+        }
     });
+    create_thumbnails(portfoliocard);
 
-    // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
-    owl_dot.each(function () {
 
-        grab = $(this).data('info');
+    function create_thumbnails(slider_name){
 
-        slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
-        //  console.log(slidegrab);
+        // 1) ASSIGN EACH 'DOT' A NUMBER
+        dotcount = 1;
+        var owl_dot = $(slider_name + ' .owl-dot');
+        var owl_item = $(slider_name + ' .owl-item');
 
-        $(this).css("background-image", "url(" + slidegrab + ")");
+        owl_dot.each(function () {
+            $(this).addClass('dotnumber' + dotcount);
+            $(this).attr('data-info', dotcount);
+            dotcount = dotcount + 1;
+        });
 
-    });
+        // 2) ASSIGN EACH 'SLIDE' A NUMBER
+        slidecount = 1;
 
-    // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
-    // TO MAKE IT ALL NEAT
-    amount = owl_dot.length;
-    gotowidth = 98 / amount;
+        owl_item.not('.cloned').each(function () {
+            $(this).addClass('slidenumber' + slidecount);
+            slidecount = slidecount + 1;
+        });
 
-    owl_dot.css("width", gotowidth + "%");
-    newwidth = owl_dot.width() / 1.5;
+        // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+        owl_dot.each(function () {
 
-    owl_dot.height(newwidth);
+            grab = $(this).data('info');
 
+            slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
+            //  console.log(slidegrab);
+
+            $(this).css("background-image", "url(" + slidegrab + ")");
+
+        });
+
+        // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
+        // TO MAKE IT ALL NEAT
+        amount = owl_dot.length;
+        gotowidth = 98 / amount;
+
+        owl_dot.css("width", gotowidth + "%");
+        newwidth = owl_dot.width() / 1.5;
+
+        owl_dot.height(newwidth);
+
+    }
 
     /*******************************************************************/
+
 //switcher in item-card
 
 
@@ -115,8 +185,7 @@ $(document).ready(function () {
 //config button  in  item-card
 
 
-
-    $('#configuration').click(function(){
+    $('#configuration').click(function () {
 
         console.log('click');
 
@@ -130,7 +199,7 @@ $(document).ready(function () {
 
 //active class in accordion
 
-    $('#accordion .card-header a').click(function(){
+    $('#accordion .card-header a').click(function () {
         $(this).parent().toggleClass('active');
         $('#accordion .card-header a').not($(this)).parent().removeClass('active');
     });

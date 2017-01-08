@@ -146,18 +146,46 @@ a:focus {
   display: none;
 }
 
-.faq{
+.filter_buttons_wrap {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  @media (max-width: $xxs) {
+    text-align: center;
+  }
+
+  .btn-white {
+    font-size: 12px;
+    margin: 5px 10px;
+
+    @media (max-width: $xxs) {
+      width: 100%;
+      max-width: 260px;
+      margin: 10px 0;
+    }
+
+  }
+  .btn-white.active {
+    background-color: $orange;
+    color: $white;
+    &:hover, &:active {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+
+}
+
+.faq {
   .card {
     margin: 0;
-    &:first-child{
+    &:first-child {
 
       .card-header {
         border-top: 1px solid $light-gray;
       }
     }
   }
-
-
 
   .card-header {
     border: solid 1px $light-gray;
@@ -208,6 +236,81 @@ a:focus {
       color: $orange;
     }
 
+    &__img {
+      margin: 15px 0;
+      max-width: 550px;
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+
+}
+
+.characteristics-table {
+  min-height: 300px;
+  height: 100%;
+  width:100%;
+  margin-bottom: 25px;
+
+  @media (max-width: $xxs) {
+    font-size: 14px;
+  }
+
+  tr {
+    border-bottom: solid 1px $light-gray;
+  }
+  td:first-child {
+    font-weight: $font-semibold;
+    width: 45%;
+    padding-left: 20px;
+
+    @media (max-width: $xxs) {
+      padding-left: 0;
+    }
+    //vertical-align: top;
+    //padding-top: 8px;
+  }
+}
+
+.card-title{
+  display: inline-block;
+  font-weight: $font-semibold;
+  font-size: 20px;
+  position: relative;
+  padding-left: 30px;
+  margin: 15px 0;
+
+  &:before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 7px;
+    top: 12px;
+    display: block;
+    position: absolute;
+    border: solid 1px $orange;
+    background-color: $orange;
+    transform: rotate(45deg);
+  }
+}
+
+.gray-table{
+  background-color: $ultra-light-gray;
+  padding:25px 20px;
+
+  @media (max-width: $tablet) {
+    padding: 15px 5px;
+  }
+  table {
+    width: 100%;
+    min-height: 150px;
+    text-align: left;
+
+    td:first-child{
+      font-weight: $font-semibold;
+    }
   }
 
 }

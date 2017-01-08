@@ -2,12 +2,19 @@
   margin-bottom: 20px;
 
   @media(max-width: $xxs) {
-    display: none;
+    //display: none;
+    .owl-nav{
+      display: none;
+    }
   }
 
   .owl-stage, .owl-item {
     position: relative;
-    max-height: 400px;
+    max-height: 500px;
+
+    @media(min-width: $l) {
+      max-height: 600px;
+    }
   }
 
   .owl-nav {
@@ -66,7 +73,7 @@
 }
 
 /*SEE END OF THUMBNAIL FUCNTION TO TINKER SIZE OF THUMBS*/
-.itemcard-slider {
+.itemcard-slider, .portfolio-card-slider, .fabric-card-slider {
 
   .owl-nav {
     position: absolute;
@@ -84,5 +91,7 @@
     display: inline-block;
 
   }
+
+
 
 }
