@@ -101,7 +101,7 @@ $(document).ready(function () {
     /*******************************************************************/
 //switcher in item-card
 
-    $('.switch input').click(function () {
+    $('.manage-switch input').click(function () {
         $(this).parent().prev().toggleClass('gray-switch');
         $(this).parent().next().toggleClass('gray-switch');
         $(this).parent().parent().siblings().toggleClass('__hidden');

@@ -8,6 +8,10 @@
   margin: 30px 0;
   .btn {
     margin-right: 35px;
+
+    @media (max-width: $tablet) {
+      margin-right: 25px;
+    }
   }
 }
 
@@ -16,9 +20,17 @@
   justify-content: space-between;
   margin-bottom: 35px;
 
+  @media (max-width: $xs) {
+    flex-wrap: wrap;
+  }
+
   .characteristics {
     width: 58%;
     display: inline-block;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
 
     &__table {
 
@@ -39,6 +51,10 @@
   .benefits {
     width: 38%;
     display: inline-block;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
 
     &__item {
       width: 100%;
@@ -83,8 +99,16 @@
   justify-content: space-between;
   margin-top: 30px;
 
+  @media (max-width: $xs) {
+    flex-wrap: wrap;
+  }
+
   .calc-block {
     margin-bottom: 25px;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
 
     &__header {
       position: relative;
@@ -92,10 +116,18 @@
       font-size: 18px;
       font-weight: $font-semibold;
       padding: 15px 0 15px 55px;
+      @media (max-width: $xxs) {
+        padding-left: 45px;
+      }
     }
 
     &__content {
       padding-left: 55px;
+
+      @media (max-width: $xxs) {
+        padding-left: 0px;
+      }
+
     }
   }
   .orange_mark {
@@ -120,32 +152,69 @@
   .calculator {
     width: 55%;
     display: inline-block;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
   }
 
   .calc_output {
 
     width: 45%;
     display: inline-block;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    .call-button {
+      margin: 30px 0;
+    }
+
   }
   .calc_output__bg {
-
+    position: relative;
     display: block;
-    background-color: $light-gray;
+    background-color: #ECF0F1;
     text-align: center;
     padding: 0 30px 15px;
+
+    &:after {
+      display: block;
+      content: '';
+      background: url("../img/config_output.jpg") repeat-x bottom;
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
 
   }
   .output-table {
     width: 100%;
     text-align: left;
+    font-weight: $font-semibold;
+    font-size: 14px;
+    line-height: 30px;
+
     &__head, &__price {
       font-size: 18px;
       font-weight: $font-semibold;
       padding: 15px 0;
+      text-transform: uppercase;
+      text-align: left;
     }
     &__price {
-
+      color: $font-color;
     }
+    &__gray {
+      color: $gray;
+      font-weight: $font-regular;
+    }
+    .rubles {
+      text-transform: lowercase;
+    }
+
   }
   .custom-controls-stacked {
 
@@ -190,6 +259,21 @@
   .manage-switch {
     position: relative;
     text-align: left;
+
+    .switch {
+
+      @media (max-width: $xxs) {
+        display: block;
+        margin-top: 5px;
+
+      }
+
+    }
+    .switcher__right {
+      @media (max-width: $xxs) {
+        margin: 0;
+      }
+    }
 
     .switcher__circle {
       left: 5px;
@@ -238,20 +322,20 @@
   }
 }
 
-.projects-wrap{
+.projects-wrap {
   display: flex;
   justify-content: space-between;
 }
 
-.project-block{
+.project-block {
 
-  &__info{
+  &__info {
     display: flex;
     justify-content: space-between;
     color: $gray;
     font-size: 14px;
   }
-  &__img{
-    border:1px solid $light-gray;
+  &__img {
+    border: 1px solid $light-gray;
   }
 }

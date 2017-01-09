@@ -4,6 +4,10 @@
     float: none;
     text-align: center;
     padding: 5px 25px 0;
+
+    @media (max-width: $tablet) {
+      padding: 5px 15px 0;
+    }
   }
 
   &__link {
