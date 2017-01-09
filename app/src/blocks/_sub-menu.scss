@@ -1,11 +1,11 @@
 .sub-menu-wrap{
   position: absolute;
-  left: 260px;
+  left: 265px;
   height: 100%;
   z-index: 90;
   width:0;
   visibility: hidden;
-  background-color: $ultra-light-grey;
+  background-color: $ultra-light-gray;
   transition:  width .3s ease,  visibility .3s ease;
   //transform: translateX(-280px);
 
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $xl){
-    left: 320px;
+    left: 325px;
   }
 }
 
@@ -78,7 +78,7 @@
 
 .sub-menu._show {
   width: 280px;
-  background-color: $ultra-light-grey;
+  background-color: $ultra-light-gray;
   padding: 0px 10px;
   transition: width .3s ease,padding .3s ease;
 }

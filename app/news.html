@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('partials/head.html')
+    <title>Новости</title>
+</head>
+<body>
+@@include('partials/side-menu.html')
+@@include('partials/header.html')
+
+<div class="section-header  __gray">
+    <div class="section-header__title">
+        Новости
+    </div>
+    <div class="section-header__hr"></div>
+    <div class="section-header__img">
+        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+    </div>
+    <div class="section-header__hr"></div>
+</div>
+<div class="detail-news">
+
+    <div class="news-description">
+        <div class="news-description__date">13.04.2016</div>
+        <div class="news-description__title">Отедельностоящая маркиза Pergola для террасы кофейни Coffeeshop Company
+        </div>
+        <div class="news-description__text">Среди разнообразия вариантов летних кафе с использованием маркиз особое
+            место занимает маркиза Пергола — гости ресторана с удовольствием проводят время на террасе, оборудованной
+            этой эффектной конструкцией. Среди преимуществ такого решения — возможность монтировать Перголу как на
+            стену, так и на специальный отдельностоящий каркас как вплотную к зданию, так и на любом расстоянии от него.
+            Смотрите фотоотчет здесь.
+        </div>
+    </div>
+    <div class="slider">
+        <div class="owl-carousel  news-slider">
+            <div class="item"><img src="http://s.fotorama.io/1.jpg" alt=""></div>
+            <div class="item"><img src="http://s.fotorama.io/2.jpg"></div>
+        </div>
+    </div>
+</div>
+
+<div class="last-news">
+    Последние новости
+</div>
+<div class="news-wrap">
+
+    <div class="news-block">
+        <div class="news-block__img ">
+            <span class="sticker -video"></span>
+            <img src="img/news1.jpg" alt="">
+        </div>
+        <div class="news-block__outer">
+            <div class="news-block__descr">
+                <div class="news-block__descr-date">10.09.2016</div>
+                <a class="news-block__descr-text" href="">
+                    <div>Видео: маркиза Ventura Premium в передаче «Квартирный вопрос»
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="news-block">
+        <div class="news-block__img ">
+            <span class="sticker -photo"></span>
+            <img src="img/news2.jpg" alt="">
+        </div>
+        <div class="news-block__outer">
+            <div class="news-block__descr">
+                <div class="news-block__descr-date">19.08.2016</div>
+                <a class="news-block__descr-text" href="">
+                    <div>ФОТООТЧЕТ: сочетание тента и маркиз для летней террасы кафе. Смотрите фотоотчет о маркизе
+                        Tango!
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('partials/footer.html')
+
+</body>
+</html>

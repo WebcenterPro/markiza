@@ -1,0 +1,106 @@
+.contacts-wrap {
+  display: flex;
+
+  @media(max-width: $xs) {
+    flex-wrap: wrap;
+  }
+
+}
+
+.cities {
+  width: 35%;
+
+  @media(max-width: $xs) {
+    width:  100%;
+  }
+
+  .card-header {
+    position: relative;
+
+    a {
+      color: $dark-gray;
+      font-weight: $font-semibold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 0px;
+      position: absolute;
+      display: block;
+      top: 40px;
+      border-bottom: 2px solid $orange;
+      transition: width 1s;
+    }
+
+    &:hover:after {
+      width: 42px;
+    }
+    &.active {
+      &:after {
+        width: 42px;
+      }
+    }
+  }
+.card-block {
+  .address, .e-mail, .phone {
+    padding-left: 25px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: $font-semibold;
+margin-bottom: 5px;
+
+    &:before {
+      position: absolute;
+      display: block;
+      left:0px;
+      color: $gray;
+      font-family: FontAwesome;
+    }
+  }
+
+  &__content{
+
+  }
+
+  .bold{
+    margin:15px 0 20px;
+  }
+}
+  .address {
+    .card-block__title {
+      &:before {
+        content: '\f041 ';
+      }
+    }
+  }
+  .e-mail {
+    .card-block__title {
+      &:before {
+        content: ' \f0e0 ';
+      }
+    }
+  }
+  .phone {
+    .card-block__title {
+      &:before {
+        content: ' \f095';
+      }
+    }
+  }
+}
+
+.map {
+  width: 65%;
+
+  @media(max-width: $xs) {
+    width:  100%;
+  }
+}
+

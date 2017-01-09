@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('partials/head.html')
+    <title>Портфолио</title>
+</head>
+<body>
+@@include('partials/side-menu.html')
+@@include('partials/header.html')
+
+<div class="section-header  __gray">
+    <div class="section-header__title">
+        Портфолио
+    </div>
+    <div class="section-header__hr"></div>
+    <div class="section-header__img">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+    </div>
+    <div class="section-header__hr"></div>
+</div>
+
+<h2 class="title">Ventura Premium, загородный дом, д. Становое </h2>
+
+
+<div class="slider">
+    <div class="owl-carousel  portfolio-card-slider">
+        <div class="item"><img src="http://s.fotorama.io/1.jpg" alt=""></div>
+        <div class="item"><img src="http://s.fotorama.io/2.jpg"></div>
+        <div class="item"><img src="img/item_slider1.jpg" alt=""></div>
+        <div class="item"><img src="img/item_slider2.jpg"></div>
+    </div>
+</div>
+
+<div class="portfolio-card-details-wrap">
+    <div class="detail-info">
+        <p>
+            Локтевая маркиза Ventura Trend с электроприводом и беспроводным датчиком ветра, а также три вертикальные
+            маркизы Calypso Wind c прозрачными вставками для беседки.
+        </p>
+        <div class="card-title">
+            Технические характеристики:
+        </div>
+        <div class="technical-characteristics">
+            <table class="characteristics-table">
+                <tr>
+                    <td>Маркиза</td>
+                    <td>Ventura Trend, Calypso Wind</td>
+                </tr>
+                <tr>
+                    <td>Управление</td>
+                    <td>Электропривод</td>
+                </tr>
+                <tr>
+                    <td>Комплектующие</td>
+                    <td>Беспроводной датчик ветра</td>
+                </tr>
+                <tr>
+                    <td>Ткань</td>
+                    <td><a class="text-link" href="fabric_collection.html">2013 Amarillo</a></td>
+                </tr>
+                <tr>
+                    <td>Опции</td>
+                    <td>Прозрачные вставки</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="card-title">
+            Используемые маркизы:
+        </div>
+
+        <div class="catalogue-section__content">
+            <div class="catalogue-block">
+                <div class="catalogue-block__img"><a href="item-card.html"><img src="img/catalog1-100.jpg" alt=""></a>
+                </div>
+                <div class="catalogue-block__descr">
+                    <div class="catalogue-block__price">от 150 000 рублей</div>
+                    <div class="catalogue-block__name">
+                        <a href="item-card.html" class="text-link">
+                            Прямая маркиза Calypso
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="catalogue-block">
+                <div class="catalogue-block__img"><a href="item-card.html"><img src="img/catalog2-100.jpg" alt=""></a>
+                </div>
+                <div class="catalogue-block__descr">
+                    <div class="catalogue-block__price">от 150 000 рублей</div>
+                    <div class="catalogue-block__name"><a href="item-card.html" class="text-link">Корзинная маркиза
+                        Sienna</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="short-info">
+        <div class="gray-table">
+            <table>
+                <tr>
+                    <td> Тип маркизы:</td>
+                    <td> Локтевая, прямая</td>
+                </tr>
+                <tr>
+                    <td> Местоположение:</td>
+                    <td>д. Становое</td>
+                </tr>
+                <tr>
+                    <td>Дата:</td>
+                    <td> 10/10/2016</td>
+                </tr>
+                <tr>
+                    <td>Срок реализации:</td>
+                    <td> 7 дней</td>
+                </tr>
+            </table>
+        </div>
+
+        <a href="#" class="call-button btn " data-toggle="modal" data-target=".callback-modal">
+            Заказать звонок
+        </a>
+    </div>
+
+</div>
+
+<div class="card-title">
+    Другие объекты:
+</div>
+<div class="projects-wrap">
+    <div class="project-block">
+        <div class="project-block__img">
+            <a href=""> <img src="img/portf1.jpg" alt=""></a>
+        </div>
+        <div class="project-block__info">
+            <div class="project-block__place">Москва</div>
+            <div class="project-block__date">10/2016</div>
+        </div>
+        <div class="project-block__name">
+            <a href="" class="text-link">Bosco di Chiliegi</a>
+        </div>
+    </div>
+    <div class="project-block">
+        <div class="project-block__img">
+            <a href=""> <img src="img/portf2.jpg" alt=""></a>
+        </div>
+        <div class="project-block__info">
+            <div class="project-block__place">Москва</div>
+            <div class="project-block__date">08/2016</div>
+        </div>
+        <div class="project-block__name">
+            <a href="" class="text-link"> Орлоffский хлеб</a>
+        </div>
+    </div>
+    <div class="project-block">
+        <div class="project-block__img">
+            <a href=""> <img src="img/portf3.jpg" alt=""></a>
+        </div>
+        <div class="project-block__info">
+            <div class="project-block__place">Москва</div>
+            <div class="project-block__date">07/2016</div>
+        </div>
+        <div class="project-block__name">
+            <a href="" class="text-link"> Кофейня Doppio</a>
+        </div>
+    </div>
+</div>
+
+@@include('partials/footer.html')
+
+</body>
+</html>
