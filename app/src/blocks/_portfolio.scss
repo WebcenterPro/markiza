@@ -86,6 +86,13 @@
     font-size: 16px;
     margin: 7px 0;
     text-transform: uppercase;
+    a{
+      color: $dark-gray;
+      &:hover, &:focus, &:active{
+        text-decoration: none;
+        color: $dark-gray;
+      }
+    }
   }
   &__location {
     font-weight: $font-semibold;

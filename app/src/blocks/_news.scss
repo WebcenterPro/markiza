@@ -68,6 +68,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (min-width: $l) {
+    justify-content: space-around;
+  }
+
   @media (max-width: $xxs) {
     justify-content: center;
   }
@@ -86,6 +90,11 @@
   justify-content: center;
   margin-bottom: 20px;
 
+  @media (min-width: $l) {
+    width: 45%;
+    margin-bottom: 85px;
+  }
+
   @media (max-width: $xs) {
 
     width: 45%;
@@ -102,6 +111,10 @@
     width: 43%;
     display: inline-block;
     position: relative;
+
+    @media (min-width: $l) {
+      width: 33%;
+    }
 
     img {
       width: 100%;
@@ -139,19 +152,29 @@
     color: $gray;
     font-size: 12px;
     text-align: left;
+
+
+
     @media (min-width: $tablet) {
       font-size: 1vw;
+    }
+    @media (min-width: $l) {
+      font-size: 14px;
     }
   }
 
   &__descr-text {
     font-size: 1.1vw;
     color: $dark-gray;
-    text-decoration: underline;
+    //text-decoration: underline;
 
     &:hover {
       text-decoration: none;
       color: $dark-gray;
+    }
+
+    @media (min-width: $l) {
+      font-size: 16px;
     }
 
     @media (min-width: $xs) and (max-width: $tablet) {
@@ -173,6 +196,24 @@
   top: 38%;
   border-radius: 50%;
   background-color: $orange;
+
+  @media (min-width: $l) {
+    width: 45px;
+    height: 45px;
+    right: -23px;
+    top: 38%;
+
+    &.-video, &.-photo, &.-text {
+      &:after {
+        font-family: $font-awesome;
+        color: $white;
+        position: relative;
+        top: 9px;
+        font-size: 19px;
+      }
+    }
+
+  }
 
   @media (max-width: $xs) {
     top: 93%;

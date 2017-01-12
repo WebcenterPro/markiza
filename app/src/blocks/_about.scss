@@ -1,19 +1,37 @@
 .block-left, .block-gray, .block-right, .block-center {
 
   display: inline-flex;
-  margin:20px 0;
-  width:100%;
+  margin: 20px 0;
+  width: 100%;
 
+  &__img {
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
 
   &__description {
     padding: 20px 30px;
     font-size: 14px;
+
+    @media (max-width: $xs) {
+      width: 100%;
+
+    }
+
   }
+
   &__title {
     font-size: 24px;
     font-weight: $font-light;
     margin-bottom: 20px;
+    display: inline-block;
+
+    &:hover{
+      text-decoration: none;
+    }
   }
+
 }
 
 .block-left {
@@ -33,10 +51,10 @@
   background-color: $gray-bg;
 
   &__description {
-    width: 70%;
+    width: 65%;
   }
   &__img {
-    width: 30%;
+    width: 35%;
     display: inline-flex;
     align-self: flex-end;
     float: right;
@@ -62,39 +80,54 @@
   justify-content: center;
 
   &__description {
-    width:60%;
+    width: 50%;
     background-color: $gray-bg;
   }
   &__img {
     display: inline-flex;
     align-self: flex-end;
+    width: 50%;
+
+    @media (max-width: $l) {
+      img {
+        width: 100%;
+      }
+
+    }
+
   }
 }
 
-
-.orange-list{
-  width:100%;
-  padding:0;
+.orange-list {
+  width: 100%;
+  padding: 0;
   margin-top: 15px;
 
-  li{
+  li {
     display: inline-block;
-    width:50%;
+    width: 50%;
     float: left;
     padding-left: 20px;
     font-size: 12px;
     color: $dark-gray;
     position: relative;
 
-    &:before{
-      content:'\f111';
-      display: block;
-      position: absolute;
-      left: 5px;
-      top:6px;
-      font-family: FontAwesome;
-      color: $orange;
-      font-size: 7px;
+    @media (min-width: $l) {
+      font-size: 14px;
+
     }
   }
+
+  &:before {
+    content: '\f111';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    font-family: FontAwesome;
+    color: $orange;
+    font-size: 7px;
+  }
 }
+
+

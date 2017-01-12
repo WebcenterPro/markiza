@@ -9,6 +9,15 @@ padding-bottom: 20px;
   margin-bottom: 30px;
 
 
+  @media (min-width: $l) {
+
+    font-size:23px;
+    &:after {
+      top:53px;
+    }
+  }
+
+
   &:after {
     content: '';
     width: 40px;
