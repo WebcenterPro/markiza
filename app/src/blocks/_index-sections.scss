@@ -40,6 +40,10 @@
     }
 
 
+    @media (min-width: $l) {
+      width: 23%;
+    }
+
     @media (max-width: $xs) {
       width: 45%;
     }

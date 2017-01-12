@@ -27,7 +27,7 @@
     margin-bottom: 20px;
     display: inline-block;
 
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
   }
@@ -76,7 +76,7 @@
 }
 
 .block-center {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 
   &__description {
@@ -116,17 +116,17 @@
       font-size: 14px;
 
     }
-  }
 
-  &:before {
-    content: '\f111';
-    display: block;
-    position: absolute;
-    left: 5px;
-    top: 6px;
-    font-family: FontAwesome;
-    color: $orange;
-    font-size: 7px;
+    &:before {
+      content: '\f111';
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      font-family: FontAwesome;
+      color: $orange;
+      font-size: 7px;
+    }
   }
 }
 

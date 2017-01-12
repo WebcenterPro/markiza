@@ -1,25 +1,29 @@
 
-.input-search{
+.search-form {
   position: relative;
-  margin-top:10px;
-  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 
-    &:before {
-      content:  "\f002";
-      font-family: $font-awesome;
-      position: absolute;
-      left: 8px;
-      top: 2px;
-      font-size: 18px;
-      color: $gray;
-    }
-    &__item{
-      margin-left: 50px;
-      width: auto;
-      border:none;
-      height: 25px;
-      &:active,&:focus{
-        outline: none;
-      }
-    }
+  &:before {
+    content: "\f002";
+    font-family: $font-awesome;
+    position: absolute;
+    left: 32px;
+    top: 0;
+    font-size: 18px;
+    color: $gray;
   }
+
+  &__input {
+    padding-left: 65px;
+    width: 100%;
+    border: none;
+    height: 25px;
+
+
+    &:active, &:focus {
+      outline: none;
+    }
+
+  }
+}

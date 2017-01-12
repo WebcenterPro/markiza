@@ -49,6 +49,14 @@
 
   width: 30%;
 
+
+  @media (max-width: $xs) {
+    width: 45%;
+
+    &:nth-child(3) {
+      order: 5;
+    }
+  }
   @media (max-width: $xs) {
     width: 45%;
 

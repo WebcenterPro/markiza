@@ -16,14 +16,15 @@ var closeMenu = function(){
     closeSub();
 };
 
-if ((side_menu).hasClass("opened")) {
-    $('.content').click(function () {
-        closeMenu();
-    });
-}
 
 $('.bars').click(function () {
+
     side_menu.addClass('opened');
+    event.stopPropagation();
+
+    $('main.content').click(closeMenu);
+
+
 });
 
 $('.side-menu-top .close').click(function () {

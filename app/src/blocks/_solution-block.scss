@@ -1,7 +1,10 @@
 .solution-block {
   display: flex;
 
-
+  @media (min-width: $l) {
+    width:80%;
+    margin: 0 auto;
+  }
 
   @media (max-width: $xs) {
     flex-wrap: wrap;

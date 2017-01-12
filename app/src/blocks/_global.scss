@@ -19,7 +19,11 @@ body {
     margin-left: 0;
   }
 }
-
+.hidden-l-down{
+  @media (max-width: $l){
+    display: none;
+  }
+}
 .container-fluid {
   flex: 1;
   width: 100%;
@@ -330,4 +334,8 @@ a:focus {
     }
   }
 
+}
+
+.text-left{
+  text-align: left;
 }

@@ -104,7 +104,7 @@
   }
 
   @media (max-width: $xxs) {
-    width: 75%;
+    width: 90%;
   }
 
   &__img {
@@ -146,6 +146,10 @@
     background-color: $white;
     padding: 10px 15px 10px 25px;
     height: 100%;
+
+    @media (min-width: $l) {
+      padding: 10px 15px 10px 32px;
+    }
   }
 
   &__descr-date {
@@ -218,6 +222,7 @@
   @media (max-width: $xs) {
     top: 93%;
     right: 5%;
+    display: none;
   }
 
   &.-video, &.-photo, &.-text {

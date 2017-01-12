@@ -11,7 +11,7 @@
   width: 35%;
 
   @media(max-width: $xs) {
-    width:  100%;
+    width: 100%;
   }
 
   .card-header {
@@ -44,35 +44,35 @@
       }
     }
   }
-.card-block {
-  .address, .e-mail, .phone {
-    padding-left: 25px;
-    position: relative;
-    display: block;
-    margin-bottom: 30px;
-  }
-
-  &__title {
-    font-weight: $font-semibold;
-margin-bottom: 5px;
-
-    &:before {
-      position: absolute;
+  .card-block {
+    .address, .e-mail, .phone {
+      padding-left: 25px;
+      position: relative;
       display: block;
-      left:0px;
-      color: $gray;
-      font-family: FontAwesome;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-weight: $font-semibold;
+      margin-bottom: 5px;
+
+      &:before {
+        position: absolute;
+        display: block;
+        left: 0px;
+        color: $gray;
+        font-family: FontAwesome;
+      }
+    }
+
+    &__content {
+
+    }
+
+    .bold {
+      margin: 15px 0 20px;
     }
   }
-
-  &__content{
-
-  }
-
-  .bold{
-    margin:15px 0 20px;
-  }
-}
   .address {
     .card-block__title {
       &:before {
@@ -100,7 +100,106 @@ margin-bottom: 5px;
   width: 65%;
 
   @media(max-width: $xs) {
-    width:  100%;
+    width: 100%;
+  }
+}
+
+.partners {
+
+  &__title {
+    font-size: 20px;
+    font-weight: $font-semibold;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    @media (min-width: $l) {
+      padding-left: 10%;
+    }
+  }
+
+  .city {
+
+    margin-bottom: 30px;
+
+    @media (min-width: $l) {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__header {
+      font-size: 18px;
+      font-weight: $font-semibold;
+      position: relative;
+      padding: 15px 0;
+      padding-left: 4%;
+      border: solid 1px $light-gray;
+      background-color: $ultra-light-gray;
+
+      @media (max-width: $xs) {
+        padding-left: 40px;
+
+      }
+
+      &:before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        left: 1.7%;
+        top: 25px;
+        display: block;
+        position: absolute;
+        border: solid 1px #ff5816;
+        background-color: #ff5816;
+        transform: rotate(45deg);
+
+        @media (max-width: $xs) {
+          left: 17px;
+        }
+      }
+
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      border: solid 1px $light-gray;
+      border-bottom: solid 1px transparent;
+      padding: 15px 0;
+
+      &:last-child{
+        border-bottom: solid 1px $light-gray;
+      }
+
+      @media (max-width: $xs) {
+        flex-wrap: wrap;
+      }
+
+      &-name {
+        font-weight: $font-semibold;
+        padding-left: 4%;
+      }
+      &-name, &-descr, &-site {
+        width: 30%;
+        font-size: 14px;
+
+        @media (max-width: $xs) {
+          width: 100%;
+          padding: 5px 10px;
+          padding-left: 40px;
+
+        }
+
+        @media (max-width: $xxs) {
+          padding: 5px 15px;
+        }
+      }
+
+      &-site {
+        padding-right: 4%;
+
+      }
+
+    }
   }
 }
 

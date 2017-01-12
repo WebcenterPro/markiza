@@ -29,6 +29,7 @@
   height: 90px;
   width:90px;
   border: 2px dotted $light-gray;
+  position: relative;
 
   &:before{
     content: '';
@@ -39,6 +40,8 @@
     transform: rotate(45deg);
     border: 2px solid $gray;
     z-index: 5;
+    top: -2px;
+    left: -3px;
   }
   &:after{
     content: '';
@@ -46,6 +49,8 @@
     height: 75px;
     width:75px;
     position: absolute;
+    top: 5px;
+    left: 5px;
     border: 2px dotted $light-gray;
   }
 

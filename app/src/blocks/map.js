@@ -20,7 +20,7 @@ $(document).ready(function () {
                 // Своё изображение иконки метки.
                 iconImageHref: 'img/map_icon.png',
                 // Размеры метки.
-                iconImageSize: [65, 50],
+                iconImageSize: [55, 50],
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
                 iconImageOffset: [-5, 0]
@@ -213,15 +213,7 @@ tochka42.ru`
                         iconImageHref: 'img/map_icon.png',
                         iconImageSize: [65, 50],
                     }))
-                    .add(new ymaps.Placemark([57.744441, 40.992049], {
-                        balloonContent: `ООО «Атланта»
-420012, г. Казань,
-ул. Щапова д. 9`
-                    }, {
-                        iconLayout: 'default#image',
-                        iconImageHref: 'img/map_icon.png',
-                        iconImageSize: [65, 50],
-                    }))
+
                     .add(new ymaps.Placemark([45.039069, 39.079832], {
                         balloonContent: `ООО «Еврогейт-ЮГ»
 ул.Уральская 95, ТР 23
