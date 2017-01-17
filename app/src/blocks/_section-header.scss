@@ -8,8 +8,13 @@
     margin: 10px 0;
     font-weight: $font-semibold;
     text-transform: uppercase;
-
-    @media (min-height: $l) {
+    a {
+      color: $dark-gray;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @media (min-width: $l) {
       font-size: 24px;
     }
   }
@@ -23,8 +28,7 @@
     width: 50px;
     margin: 20px 0;
 
-
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       display: inline-block;
@@ -35,9 +39,12 @@
       transform: rotate(45deg);
       border: solid 1px $orange;
     }
+    img {
+      max-width: 25px;
+    }
   }
 
-  &__hr{
+  &__hr {
     display: inline-block;
     width: 100px;
     border-bottom: solid 1px $orange;
@@ -45,7 +52,7 @@
     position: relative;
     top: -8px;
 
-    @media (max-width: $xxs){
+    @media (max-width: $xxs) {
       width: 35px;
       margin: 0 25px;
     }

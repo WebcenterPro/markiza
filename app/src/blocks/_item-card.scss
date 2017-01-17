@@ -81,6 +81,8 @@
           transform: rotate(45deg);
           border: 1px solid #919191;
           z-index: 10;
+          top: 15px;
+          left: 14px;
         }
       }
       &-description {
@@ -371,9 +373,8 @@
   }
   &__img {
     border: 1px solid $light-gray;
-    img {
-      width: 100%;
-    }
+    padding-bottom: 90%;
+
 
   }
 }

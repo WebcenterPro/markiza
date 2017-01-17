@@ -20,10 +20,17 @@ var closeMenu = function(){
 $('.bars').click(function () {
 
     side_menu.addClass('opened');
+
     event.stopPropagation();
 
     $('main.content').click(closeMenu);
 
+});
+$('.side-menu-items__catalog .side-menu-items__item').click(function () {
+
+    event.stopPropagation();
+
+    $('main.content').click(closeMenu);
 
 });
 

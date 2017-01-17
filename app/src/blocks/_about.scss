@@ -98,36 +98,6 @@
   }
 }
 
-.orange-list {
-  width: 100%;
-  padding: 0;
-  margin-top: 15px;
 
-  li {
-    display: inline-block;
-    width: 50%;
-    float: left;
-    padding-left: 20px;
-    font-size: 12px;
-    color: $dark-gray;
-    position: relative;
-
-    @media (min-width: $l) {
-      font-size: 14px;
-
-    }
-
-    &:before {
-      content: '\f111';
-      display: block;
-      position: absolute;
-      left: 5px;
-      top: 6px;
-      font-family: FontAwesome;
-      color: $orange;
-      font-size: 7px;
-    }
-  }
-}
 
 

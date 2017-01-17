@@ -75,3 +75,17 @@
   }
 
 }
+
+
+.__two-columns{
+
+ li{
+   width:50%;
+   float: left;
+   font-size: 12px;
+ }
+  @media (min-width: $l) {
+    font-size: 14px;
+
+  }
+}
